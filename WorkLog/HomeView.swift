@@ -13,6 +13,10 @@ struct HomeView: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading) {
+                    Text("Hi, Danny")
+                        .font(.largeTitle)
+                        .fontWeight(.medium)
+                        .padding(.top)
                     Text("Tuesday 11 April")
                         .modifier(DashboardTitleTextStyle())
                     
@@ -29,9 +33,12 @@ struct HomeView: View {
                             HStack {
                                 Image(systemName: "clock.fill")
                                     .foregroundColor(Color(red: 30/255, green: 139/255, blue: 195/255))
-                                Text("9:00 - 3:30")
+                                Text("10:00 - 12:30")
                             }
                         }
+                        
+                        
+                        
                         
                         Spacer()
                         
@@ -43,6 +50,43 @@ struct HomeView: View {
                             }
                             HStack {
                                 Text("Joe Bloggs")
+                                Image(systemName: "person.circle.fill")
+                                    .foregroundColor(Color(red: 4/255, green: 59/255, blue: 92/255))
+                            }
+                        }
+                    }
+                    .fontWeight(.light)
+                    .padding()
+                    .background(Color.white)
+                    .modifier(DashboardComponentStyle())
+                    
+                    HStack {
+                        VStack(alignment: .leading, spacing: 20) {
+                            HStack {
+                                Image(systemName: "info.circle.fill")
+                                    .foregroundColor(Color(red: 30/255, green: 139/255, blue: 195/255))
+                                Text("Paint Kitchen")
+                            }
+                            HStack {
+                                Image(systemName: "clock.fill")
+                                    .foregroundColor(Color(red: 30/255, green: 139/255, blue: 195/255))
+                                Text("14:00 - 17:30")
+                            }
+                        }
+                        
+                        
+                        
+                        
+                        Spacer()
+                        
+                        VStack(alignment: .trailing, spacing: 20) {
+                            HStack {
+                                Text("Gidea Park")
+                                Image(systemName: "mappin.circle.fill")
+                                    .foregroundColor(Color(red: 4/255, green: 59/255, blue: 92/255))
+                            }
+                            HStack {
+                                Text("John Doe")
                                 Image(systemName: "person.circle.fill")
                                     .foregroundColor(Color(red: 4/255, green: 59/255, blue: 92/255))
                             }
@@ -100,7 +144,6 @@ struct HomeView: View {
                     Spacer()
                 }
                 .padding(.horizontal)
-                .navigationTitle("Hi, Danny")
             }
         }
     }

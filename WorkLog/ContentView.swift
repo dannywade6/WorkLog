@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var viewModel = JobViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationStack {
+            VStack {
+                NavigationLink(destination: AddJobView(viewModel: viewModel)) {
+                    Text("Add Job")
+                }
+                JobListView(viewModel: viewModel)
+            }
+            .navigationTitle("Jobs")
         }
-        .padding()
     }
 }
 

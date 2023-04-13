@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		306B3EE329E897C300D636D5 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306B3EE229E897C300D636D5 /* Job.swift */; };
+		306B3EE629E8982F00D636D5 /* JobViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306B3EE529E8982F00D636D5 /* JobViewModel.swift */; };
+		306B3EE929E898BF00D636D5 /* AddJobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306B3EE829E898BF00D636D5 /* AddJobView.swift */; };
+		306B3EEB29E89A1000D636D5 /* JobListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306B3EEA29E89A1000D636D5 /* JobListView.swift */; };
+		306B3EEF29E8A1BD00D636D5 /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306B3EEE29E8A1BD00D636D5 /* HomeTabView.swift */; };
 		30A5559429E5B9150009F240 /* WorkLogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A5559329E5B9150009F240 /* WorkLogApp.swift */; };
 		30A5559629E5B9150009F240 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A5559529E5B9150009F240 /* ContentView.swift */; };
 		30A5559829E5B9160009F240 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30A5559729E5B9160009F240 /* Assets.xcassets */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		306B3EE229E897C300D636D5 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		306B3EE529E8982F00D636D5 /* JobViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewModel.swift; sourceTree = "<group>"; };
+		306B3EE829E898BF00D636D5 /* AddJobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJobView.swift; sourceTree = "<group>"; };
+		306B3EEA29E89A1000D636D5 /* JobListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListView.swift; sourceTree = "<group>"; };
+		306B3EEE29E8A1BD00D636D5 /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
 		30A5559029E5B9150009F240 /* WorkLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A5559329E5B9150009F240 /* WorkLogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkLogApp.swift; sourceTree = "<group>"; };
 		30A5559529E5B9150009F240 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,6 +48,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		306B3EE129E897BB00D636D5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				306B3EE229E897C300D636D5 /* Job.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		306B3EE429E8982200D636D5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				306B3EE529E8982F00D636D5 /* JobViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		306B3EE729E898AC00D636D5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				306B3EE829E898BF00D636D5 /* AddJobView.swift */,
+				306B3EEA29E89A1000D636D5 /* JobListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		30A5558729E5B9150009F240 = {
 			isa = PBXGroup;
 			children = (
@@ -57,10 +92,14 @@
 		30A5559229E5B9150009F240 /* WorkLog */ = {
 			isa = PBXGroup;
 			children = (
+				306B3EE729E898AC00D636D5 /* Views */,
+				306B3EE429E8982200D636D5 /* ViewModels */,
+				306B3EE129E897BB00D636D5 /* Models */,
 				30A555A729E5E2870009F240 /* Modifiers */,
 				30A5559329E5B9150009F240 /* WorkLogApp.swift */,
 				30A5559529E5B9150009F240 /* ContentView.swift */,
 				30A555A129E5B92D0009F240 /* HomeView.swift */,
+				306B3EEE29E8A1BD00D636D5 /* HomeTabView.swift */,
 				30A555A529E5BE730009F240 /* ProfitLossChart.swift */,
 				30A5559729E5B9160009F240 /* Assets.xcassets */,
 				30A5559929E5B9160009F240 /* Preview Content */,
@@ -158,6 +197,11 @@
 				30A555A229E5B92D0009F240 /* HomeView.swift in Sources */,
 				30A5559629E5B9150009F240 /* ContentView.swift in Sources */,
 				30A5559429E5B9150009F240 /* WorkLogApp.swift in Sources */,
+				306B3EE629E8982F00D636D5 /* JobViewModel.swift in Sources */,
+				306B3EEF29E8A1BD00D636D5 /* HomeTabView.swift in Sources */,
+				306B3EE929E898BF00D636D5 /* AddJobView.swift in Sources */,
+				306B3EE329E897C300D636D5 /* Job.swift in Sources */,
+				306B3EEB29E89A1000D636D5 /* JobListView.swift in Sources */,
 				30A555A629E5BE730009F240 /* ProfitLossChart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +339,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -324,6 +369,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

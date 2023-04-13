@@ -56,7 +56,8 @@ struct ProfitLossChart: View {
             .chartXAxis(.hidden)
             
         }
-//        .padding()
+//        .frame(width: 400, height: 150)
+        .padding()
         
     }
 }

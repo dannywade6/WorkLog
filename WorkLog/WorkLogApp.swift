@@ -11,7 +11,7 @@ import SwiftUI
 struct WorkLogApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeTabView()
         }
     }
 }

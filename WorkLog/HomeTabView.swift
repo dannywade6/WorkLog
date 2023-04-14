@@ -33,7 +33,7 @@ struct HomeTabView: View {
                 }
                 .tag("Two")
             
-            Text("Tab 3")
+            TransactionHomeView(viewModel: TransactionViewModel())
                 .tabItem {
                     Label("Finance", systemImage: "dollarsign.circle")
                 }

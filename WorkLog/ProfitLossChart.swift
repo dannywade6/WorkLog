@@ -14,7 +14,7 @@ struct Revenue: Identifiable {
     let revenueType: ProfitLossType
     let amount: Double
     
-    enum ProfitLossType: String {
+    enum ProfitLossType: String, Equatable {
         case income = "Income"
         case expense = "Expense"
     }
@@ -48,8 +48,7 @@ struct ProfitLossChart: View {
                 .foregroundStyle(.linearGradient(
                     colors: [barColor1, barColor2],
                     startPoint: .leading,
-                    endPoint: .trailing)
-                )
+                    endPoint: .trailing))
                 .cornerRadius(10)
             }
 //            .chartYAxis(.hidden)

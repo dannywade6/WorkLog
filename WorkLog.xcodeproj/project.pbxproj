@@ -17,6 +17,9 @@
 		306B3EE929E898BF00D636D5 /* AddJobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306B3EE829E898BF00D636D5 /* AddJobView.swift */; };
 		306B3EEB29E89A1000D636D5 /* JobListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306B3EEA29E89A1000D636D5 /* JobListView.swift */; };
 		306B3EEF29E8A1BD00D636D5 /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306B3EEE29E8A1BD00D636D5 /* HomeTabView.swift */; };
+		306B3EF229EAF89100D636D5 /* SwipeActions in Frameworks */ = {isa = PBXBuildFile; productRef = 306B3EF129EAF89100D636D5 /* SwipeActions */; };
+		306B3EF429EAF8CD00D636D5 /* SwipeSandbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306B3EF329EAF8CD00D636D5 /* SwipeSandbox.swift */; };
+		306B3F1229EB079200D636D5 /* JobTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306B3F1129EB079200D636D5 /* JobTodayView.swift */; };
 		30A5559429E5B9150009F240 /* WorkLogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A5559329E5B9150009F240 /* WorkLogApp.swift */; };
 		30A5559629E5B9150009F240 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A5559529E5B9150009F240 /* ContentView.swift */; };
 		30A5559829E5B9160009F240 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30A5559729E5B9160009F240 /* Assets.xcassets */; };
@@ -37,6 +40,8 @@
 		306B3EE829E898BF00D636D5 /* AddJobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJobView.swift; sourceTree = "<group>"; };
 		306B3EEA29E89A1000D636D5 /* JobListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListView.swift; sourceTree = "<group>"; };
 		306B3EEE29E8A1BD00D636D5 /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
+		306B3EF329EAF8CD00D636D5 /* SwipeSandbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeSandbox.swift; sourceTree = "<group>"; };
+		306B3F1129EB079200D636D5 /* JobTodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTodayView.swift; sourceTree = "<group>"; };
 		30A5559029E5B9150009F240 /* WorkLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A5559329E5B9150009F240 /* WorkLogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkLogApp.swift; sourceTree = "<group>"; };
 		30A5559529E5B9150009F240 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				306B3EF229EAF89100D636D5 /* SwipeActions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,7 @@
 			children = (
 				306B3EE829E898BF00D636D5 /* AddJobView.swift */,
 				306B3EEA29E89A1000D636D5 /* JobListView.swift */,
+				306B3F1129EB079200D636D5 /* JobTodayView.swift */,
 			);
 			path = Job;
 			sourceTree = "<group>";
@@ -73,6 +80,7 @@
 				00EA723329E97D66003ABFFB /* AddTransactionView.swift */,
 				00EA723529E97F93003ABFFB /* TransactionListView.swift */,
 				00EA723729E9811F003ABFFB /* TransactionHomeView.swift */,
+				30A555A529E5BE730009F240 /* ProfitLossChart.swift */,
 			);
 			path = Transaction;
 			sourceTree = "<group>";
@@ -98,10 +106,20 @@
 		306B3EE729E898AC00D636D5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				306B3F1329EB091A00D636D5 /* Home */,
 				00EA723229E97D36003ABFFB /* Transaction */,
 				00EA723129E97D2A003ABFFB /* Job */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		306B3F1329EB091A00D636D5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				306B3EEE29E8A1BD00D636D5 /* HomeTabView.swift */,
+				30A555A129E5B92D0009F240 /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		30A5558729E5B9150009F240 = {
@@ -129,9 +147,7 @@
 				30A555A729E5E2870009F240 /* Modifiers */,
 				30A5559329E5B9150009F240 /* WorkLogApp.swift */,
 				30A5559529E5B9150009F240 /* ContentView.swift */,
-				30A555A129E5B92D0009F240 /* HomeView.swift */,
-				306B3EEE29E8A1BD00D636D5 /* HomeTabView.swift */,
-				30A555A529E5BE730009F240 /* ProfitLossChart.swift */,
+				306B3EF329EAF8CD00D636D5 /* SwipeSandbox.swift */,
 				30A5559729E5B9160009F240 /* Assets.xcassets */,
 				30A5559929E5B9160009F240 /* Preview Content */,
 			);
@@ -170,6 +186,9 @@
 			dependencies = (
 			);
 			name = WorkLog;
+			packageProductDependencies = (
+				306B3EF129EAF89100D636D5 /* SwipeActions */,
+			);
 			productName = WorkLog;
 			productReference = 30A5559029E5B9150009F240 /* WorkLog.app */;
 			productType = "com.apple.product-type.application";
@@ -198,6 +217,9 @@
 				Base,
 			);
 			mainGroup = 30A5558729E5B9150009F240;
+			packageReferences = (
+				306B3EF029EAF89100D636D5 /* XCRemoteSwiftPackageReference "SwipeActions" */,
+			);
 			productRefGroup = 30A5559129E5B9150009F240 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -228,6 +250,7 @@
 				00EA723429E97D66003ABFFB /* AddTransactionView.swift in Sources */,
 				30A555A929E5E2970009F240 /* ViewModifiers.swift in Sources */,
 				30A555A229E5B92D0009F240 /* HomeView.swift in Sources */,
+				306B3EF429EAF8CD00D636D5 /* SwipeSandbox.swift in Sources */,
 				30A5559629E5B9150009F240 /* ContentView.swift in Sources */,
 				00EA723629E97F93003ABFFB /* TransactionListView.swift in Sources */,
 				30A5559429E5B9150009F240 /* WorkLogApp.swift in Sources */,
@@ -235,6 +258,7 @@
 				00EA723829E9811F003ABFFB /* TransactionHomeView.swift in Sources */,
 				306B3EEF29E8A1BD00D636D5 /* HomeTabView.swift in Sources */,
 				306B3EE929E898BF00D636D5 /* AddJobView.swift in Sources */,
+				306B3F1229EB079200D636D5 /* JobTodayView.swift in Sources */,
 				306B3EE329E897C300D636D5 /* Job.swift in Sources */,
 				306B3EEB29E89A1000D636D5 /* JobListView.swift in Sources */,
 				30A555A629E5BE730009F240 /* ProfitLossChart.swift in Sources */,
@@ -441,6 +465,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		306B3EF029EAF89100D636D5 /* XCRemoteSwiftPackageReference "SwipeActions" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/aheze/SwipeActions.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		306B3EF129EAF89100D636D5 /* SwipeActions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 306B3EF029EAF89100D636D5 /* XCRemoteSwiftPackageReference "SwipeActions" */;
+			productName = SwipeActions;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 30A5558829E5B9150009F240 /* Project object */;
 }

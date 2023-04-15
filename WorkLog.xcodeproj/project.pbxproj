@@ -20,6 +20,7 @@
 		306B3EF229EAF89100D636D5 /* SwipeActions in Frameworks */ = {isa = PBXBuildFile; productRef = 306B3EF129EAF89100D636D5 /* SwipeActions */; };
 		306B3EF429EAF8CD00D636D5 /* SwipeSandbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306B3EF329EAF8CD00D636D5 /* SwipeSandbox.swift */; };
 		306B3F1229EB079200D636D5 /* JobTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306B3F1129EB079200D636D5 /* JobTodayView.swift */; };
+		306B3F1629EB0C6E00D636D5 /* ProfileInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306B3F1529EB0C6E00D636D5 /* ProfileInfoView.swift */; };
 		30A5559429E5B9150009F240 /* WorkLogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A5559329E5B9150009F240 /* WorkLogApp.swift */; };
 		30A5559629E5B9150009F240 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A5559529E5B9150009F240 /* ContentView.swift */; };
 		30A5559829E5B9160009F240 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30A5559729E5B9160009F240 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		306B3EEE29E8A1BD00D636D5 /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
 		306B3EF329EAF8CD00D636D5 /* SwipeSandbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeSandbox.swift; sourceTree = "<group>"; };
 		306B3F1129EB079200D636D5 /* JobTodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTodayView.swift; sourceTree = "<group>"; };
+		306B3F1529EB0C6E00D636D5 /* ProfileInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoView.swift; sourceTree = "<group>"; };
 		30A5559029E5B9150009F240 /* WorkLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A5559329E5B9150009F240 /* WorkLogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkLogApp.swift; sourceTree = "<group>"; };
 		30A5559529E5B9150009F240 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 		306B3EE729E898AC00D636D5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				306B3F1429EB0C6200D636D5 /* Profile */,
 				306B3F1329EB091A00D636D5 /* Home */,
 				00EA723229E97D36003ABFFB /* Transaction */,
 				00EA723129E97D2A003ABFFB /* Job */,
@@ -120,6 +123,14 @@
 				30A555A129E5B92D0009F240 /* HomeView.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		306B3F1429EB0C6200D636D5 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				306B3F1529EB0C6E00D636D5 /* ProfileInfoView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		30A5558729E5B9150009F240 = {
@@ -246,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				306B3F1629EB0C6E00D636D5 /* ProfileInfoView.swift in Sources */,
 				00EA722E29E97BA0003ABFFB /* Transaction.swift in Sources */,
 				00EA723429E97D66003ABFFB /* AddTransactionView.swift in Sources */,
 				30A555A929E5E2970009F240 /* ViewModifiers.swift in Sources */,

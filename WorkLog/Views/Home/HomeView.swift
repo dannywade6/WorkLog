@@ -10,6 +10,7 @@ import SwipeActions
 
 struct HomeView: View {
     
+    @State var showProfileInfoView:Bool = false
     let date: Date = Date()
     
     var body: some View {
@@ -29,11 +30,18 @@ struct HomeView: View {
                     
                     Spacer()
                     
-                    Image(systemName: "person.crop.circle.fill")
-                        .foregroundColor(Color("brand.blue.two"))
-                        .font(.largeTitle)
-                        .fontWeight(.medium)
-                    
+                    Button {
+                        showProfileInfoView.toggle()
+                    } label: {
+                        Image(systemName: "person.crop.circle.fill")
+                            .foregroundColor(Color("brand.blue.two"))
+                            .font(.largeTitle)
+                            .fontWeight(.medium)
+                    }
+                    .fullScreenCover(isPresented: $showProfileInfoView) {
+                        ProfileInfoView()
+                    }
+ 
                 }
                 .padding(.horizontal)
                 

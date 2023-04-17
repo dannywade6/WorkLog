@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00B3E3C829ED45DE004B0328 /* TodayJobSandboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B3E3C729ED45DE004B0328 /* TodayJobSandboxView.swift */; };
+		00B3E3CA29ED579F004B0328 /* JobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B3E3C929ED579F004B0328 /* JobView.swift */; };
 		00EA722E29E97BA0003ABFFB /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA722D29E97BA0003ABFFB /* Transaction.swift */; };
 		00EA723029E97BCA003ABFFB /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA722F29E97BCA003ABFFB /* TransactionViewModel.swift */; };
 		00EA723429E97D66003ABFFB /* AddTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA723329E97D66003ABFFB /* AddTransactionView.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00B3E3C729ED45DE004B0328 /* TodayJobSandboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayJobSandboxView.swift; sourceTree = "<group>"; };
+		00B3E3C929ED579F004B0328 /* JobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobView.swift; sourceTree = "<group>"; };
 		00EA722D29E97BA0003ABFFB /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		00EA722F29E97BCA003ABFFB /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
 		00EA723329E97D66003ABFFB /* AddTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionView.swift; sourceTree = "<group>"; };
@@ -66,9 +70,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00B3E3CD29ED8450004B0328 /* TempFiles */ = {
+			isa = PBXGroup;
+			children = (
+				00B3E3C729ED45DE004B0328 /* TodayJobSandboxView.swift */,
+				306B3EF329EAF8CD00D636D5 /* SwipeSandbox.swift */,
+			);
+			path = TempFiles;
+			sourceTree = "<group>";
+		};
 		00EA723129E97D2A003ABFFB /* Job */ = {
 			isa = PBXGroup;
 			children = (
+				00B3E3C929ED579F004B0328 /* JobView.swift */,
 				306B3EE829E898BF00D636D5 /* AddJobView.swift */,
 				306B3EEA29E89A1000D636D5 /* JobListView.swift */,
 				306B3F1129EB079200D636D5 /* JobTodayView.swift */,
@@ -152,13 +166,13 @@
 		30A5559229E5B9150009F240 /* WorkLog */ = {
 			isa = PBXGroup;
 			children = (
+				00B3E3CD29ED8450004B0328 /* TempFiles */,
 				306B3EE729E898AC00D636D5 /* Views */,
 				306B3EE429E8982200D636D5 /* ViewModels */,
 				306B3EE129E897BB00D636D5 /* Models */,
 				30A555A729E5E2870009F240 /* Modifiers */,
 				30A5559329E5B9150009F240 /* WorkLogApp.swift */,
 				30A5559529E5B9150009F240 /* ContentView.swift */,
-				306B3EF329EAF8CD00D636D5 /* SwipeSandbox.swift */,
 				30A5559729E5B9160009F240 /* Assets.xcassets */,
 				30A5559929E5B9160009F240 /* Preview Content */,
 			);
@@ -271,8 +285,10 @@
 				306B3EEF29E8A1BD00D636D5 /* HomeTabView.swift in Sources */,
 				306B3EE929E898BF00D636D5 /* AddJobView.swift in Sources */,
 				306B3F1229EB079200D636D5 /* JobTodayView.swift in Sources */,
+				00B3E3CA29ED579F004B0328 /* JobView.swift in Sources */,
 				306B3EE329E897C300D636D5 /* Job.swift in Sources */,
 				306B3EEB29E89A1000D636D5 /* JobListView.swift in Sources */,
+				00B3E3C829ED45DE004B0328 /* TodayJobSandboxView.swift in Sources */,
 				30A555A629E5BE730009F240 /* ProfitLossChart.swift in Sources */,
 				00EA723029E97BCA003ABFFB /* TransactionViewModel.swift in Sources */,
 			);

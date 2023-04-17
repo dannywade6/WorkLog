@@ -50,16 +50,11 @@ struct HomeView: View {
                         Text("Jobs Today:")
                             .modifier(DashboardHeaderTextStyle())
                         
-                        SwipeView {
-                            JobTodayView(description: "Change Light", location: "Hornchurch", customerName: "Mike Jones", jobTime: "10:00 - 12:00")
-                        } trailingActions: { _ in
-                            SwipeAction("Complete") {
-                                print("Complete")
-                            }
-                        }
+
+//                            JobTodayView(description: "Change Light", location: "Hornchurch", customerName: "Mike Jones", jobTime: "10:00 - 12:00")
+                            TodayJobSandboxView(viewModel: JobViewModel())
                         
-                        
-                        
+
                         
                         Text("Monthly Profit & Loss:")
                             .modifier(DashboardHeaderTextStyle())

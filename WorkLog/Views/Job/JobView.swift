@@ -14,7 +14,7 @@ struct JobView: View {
                 List {
                     Section("Today") {
                         DisclosureGroup("Change Door") {
-                            FormRowView(firstItem: "Job Description", secondItem: "Change Roof")
+                            Text("Fix Roof")
                             
                         }
                         

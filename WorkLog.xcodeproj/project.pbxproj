@@ -23,6 +23,7 @@
 		306B3EF429EAF8CD00D636D5 /* SwipeSandbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306B3EF329EAF8CD00D636D5 /* SwipeSandbox.swift */; };
 		306B3F1229EB079200D636D5 /* JobTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306B3F1129EB079200D636D5 /* JobTodayView.swift */; };
 		306B3F1629EB0C6E00D636D5 /* ProfileInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306B3F1529EB0C6E00D636D5 /* ProfileInfoView.swift */; };
+		306B3F1929EDE77500D636D5 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306B3F1829EDE77500D636D5 /* OnboardingView.swift */; };
 		30A5559429E5B9150009F240 /* WorkLogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A5559329E5B9150009F240 /* WorkLogApp.swift */; };
 		30A5559629E5B9150009F240 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A5559529E5B9150009F240 /* ContentView.swift */; };
 		30A5559829E5B9160009F240 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30A5559729E5B9160009F240 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		306B3EF329EAF8CD00D636D5 /* SwipeSandbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeSandbox.swift; sourceTree = "<group>"; };
 		306B3F1129EB079200D636D5 /* JobTodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTodayView.swift; sourceTree = "<group>"; };
 		306B3F1529EB0C6E00D636D5 /* ProfileInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoView.swift; sourceTree = "<group>"; };
+		306B3F1829EDE77500D636D5 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		30A5559029E5B9150009F240 /* WorkLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A5559329E5B9150009F240 /* WorkLogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkLogApp.swift; sourceTree = "<group>"; };
 		30A5559529E5B9150009F240 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -147,6 +149,14 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		306B3F1729EDE75400D636D5 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				306B3F1829EDE77500D636D5 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		30A5558729E5B9150009F240 = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +176,7 @@
 		30A5559229E5B9150009F240 /* WorkLog */ = {
 			isa = PBXGroup;
 			children = (
+				306B3F1729EDE75400D636D5 /* Onboarding */,
 				00B3E3CD29ED8450004B0328 /* TempFiles */,
 				306B3EE729E898AC00D636D5 /* Views */,
 				306B3EE429E8982200D636D5 /* ViewModels */,
@@ -277,6 +288,7 @@
 				30A555A929E5E2970009F240 /* ViewModifiers.swift in Sources */,
 				30A555A229E5B92D0009F240 /* HomeView.swift in Sources */,
 				306B3EF429EAF8CD00D636D5 /* SwipeSandbox.swift in Sources */,
+				306B3F1929EDE77500D636D5 /* OnboardingView.swift in Sources */,
 				30A5559629E5B9150009F240 /* ContentView.swift in Sources */,
 				00EA723629E97F93003ABFFB /* TransactionListView.swift in Sources */,
 				30A5559429E5B9150009F240 /* WorkLogApp.swift in Sources */,

@@ -28,8 +28,8 @@ let revenueData: [Revenue] = [
 
 struct ProfitLossChart: View {
     
-    let barColor1 = Color(red: 30/255, green: 139/255, blue: 195/255)
-    let barColor2 = Color(red: 4/255, green: 59/255, blue: 92/255)
+    let barColor1 = Color("brand.blue.one")
+    let barColor2 = Color("brand.blue.two")
     
     var body: some View {
         VStack {
@@ -44,6 +44,7 @@ struct ProfitLossChart: View {
                     Text(String(format: "£%.0f", item.amount))
                         .foregroundColor(Color.gray)
                         .font(.system(size: 12, weight: .bold))
+                        .padding()
                 }
                 .foregroundStyle(.linearGradient(
                     colors: [barColor1, barColor2],
@@ -51,11 +52,9 @@ struct ProfitLossChart: View {
                     endPoint: .trailing))
                 .cornerRadius(10)
             }
-//            .chartYAxis(.hidden)
             .chartXAxis(.hidden)
             
         }
-//        .frame(width: 400, height: 150)
         .padding()
         
     }

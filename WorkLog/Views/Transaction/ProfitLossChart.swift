@@ -62,10 +62,10 @@ struct RevenueData: Identifiable {
 
 extension RevenueData {
     static let incomeAmount: [RevenueData] = [
-        .init(incomeExpenseType: .income, amount: 3200)
+        .init(incomeExpenseType: .income, amount: 900)
     ]
     
     static let expenseAmount: [RevenueData] = [
-        .init(incomeExpenseType: .expense, amount: 1600)
+        .init(incomeExpenseType: .expense, amount: 200)
     ]
 }

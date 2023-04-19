@@ -12,8 +12,9 @@ struct JobView: View {
         NavigationStack {
             VStack {
                 HStack {
-                    Button {
-                        
+                    
+                    NavigationLink {
+                        AddJobView(viewModel: JobViewModel())
                     } label: {
                         Text("Create Job")
                             .modifier(TransactionButtonStyle(color: Color("brand.blue.two")))
@@ -32,7 +33,6 @@ struct JobView: View {
                     JobCardView(customerName: "Jay Rutland", jobDescription: "Change Carpet", location: "Grays", day: "Today")
                     JobCardView(customerName: "Alice Small", jobDescription: "Repair Light", location: "Billericay", day: "Today")
                 }
-                Spacer()
             }
             .navigationTitle("Jobs Dashboard")
         }

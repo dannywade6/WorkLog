@@ -87,6 +87,7 @@ struct TransactionListView: View {
                     .padding(.horizontal)
                 }
                 .scrollIndicators(.hidden)
+//                .padding(.bottom)
             }
             .navigationTitle("Transactions")
         }

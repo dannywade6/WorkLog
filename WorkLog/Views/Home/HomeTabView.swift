@@ -36,11 +36,12 @@ struct HomeTabView: View {
             TransactionListView(viewModel: TransactionViewModel())
 //            TransactionsSandboxView()
                 .tabItem {
-                    Label("Finance", systemImage: "dollarsign.circle")
+                    Label("Transactions", systemImage: "dollarsign.circle")
                 }
                 .tag("Three")
         }
         .accentColor(Color("brand.blue.one"))
+//        .padding(.top)
     }
 }
 

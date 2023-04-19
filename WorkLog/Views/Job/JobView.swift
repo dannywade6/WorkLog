@@ -11,7 +11,22 @@ struct JobView: View {
     var body: some View {
         NavigationStack {
             VStack {
+                HStack {
+                    Button {
+                        
+                    } label: {
+                        Text("Create Job")
+                            .modifier(TransactionButtonStyle(color: Color("brand.blue.two")))
+                    }
+                    Button {
+                        
+                    } label: {
+                        Text("Completed Jobs")
+                            .modifier(TransactionButtonStyle(color: Color("brand.gray.two")))
+                    }
 
+                }
+                .padding()
                 ScrollView {
                     JobCardView(customerName: "Adam Cooper", jobDescription: "Fix Guttering", location: "Enfield", day: "Today")
                     JobCardView(customerName: "Jay Rutland", jobDescription: "Change Carpet", location: "Grays", day: "Today")

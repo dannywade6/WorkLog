@@ -21,10 +21,10 @@ struct JobCardView: View {
                 HStack {
                     Text(customerName)
                         .foregroundColor(.gray)
-                    Spacer()
-                    Text("\(date, style: .date)")
-                        .foregroundColor(.gray)
-                        .font(.callout)
+//                    Spacer()
+//                    Text("\(date, style: .date)")
+//                        .foregroundColor(.gray)
+//                        .font(.callout)
                 }
                 
                 Text(jobDescription)
@@ -39,7 +39,8 @@ struct JobCardView: View {
                     HStack(alignment: .top, spacing: 4) {
                         Image(systemName: "calendar")
                             .foregroundColor(Color("brand.blue.two"))
-                        Text(day)
+//                        Text(day)
+                        Text("\(date, style: .date)")
                         Spacer()
                         Image(systemName: "chevron.right")
                             .font(.title3)

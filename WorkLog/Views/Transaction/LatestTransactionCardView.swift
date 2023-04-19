@@ -39,7 +39,7 @@ struct LatestTransactionCardView: View {
                         
                         Spacer()
                         
-                        Text(isExpense ? "- £\(transactionAmount)" : "£\(transactionAmount)")
+                        Text(isExpense ? "- £\(transactionAmount)" : "+ £\(transactionAmount)")
                             .font(.headline)
                             .bold()
                         

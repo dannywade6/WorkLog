@@ -23,7 +23,8 @@ struct HomeTabView: View {
                 .tag("One")
             
             
-            AddJobView(viewModel: JobViewModel())
+//            AddJobView(viewModel: JobViewModel())
+            JobView()
 //                .onTapGesture {
 //                    selectedTab = "One"
 //                }
@@ -32,7 +33,7 @@ struct HomeTabView: View {
                 }
                 .tag("Two")
             
-            TransactionHomeView(viewModel: TransactionViewModel())
+            TransactionListView(viewModel: TransactionViewModel())
 //            TransactionsSandboxView()
                 .tabItem {
                     Label("Finance", systemImage: "dollarsign.circle")

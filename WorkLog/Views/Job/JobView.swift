@@ -11,16 +11,13 @@ struct JobView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                List {
-                    Section("Today") {
-                        DisclosureGroup("Change Door") {
-                            Text("Fix Roof")
-                            
-                        }
-                        
-                    }
+
+                ScrollView {
+                    JobCardView(customerName: "Adam Cooper", jobDescription: "Fix Guttering", location: "Enfield", day: "Today")
+                    JobCardView(customerName: "Jay Rutland", jobDescription: "Change Carpet", location: "Grays", day: "Today")
+                    JobCardView(customerName: "Alice Small", jobDescription: "Repair Light", location: "Billericay", day: "Today")
                 }
-                
+                Spacer()
             }
             .navigationTitle("Jobs Dashboard")
         }

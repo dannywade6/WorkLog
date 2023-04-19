@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		005D893129F03D650042ECFD /* JobCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D893029F03D650042ECFD /* JobCardView.swift */; };
+		005D893329F0492F0042ECFD /* JobEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D893229F0492F0042ECFD /* JobEmptyStateView.swift */; };
 		00B3E3C829ED45DE004B0328 /* TodayJobSandboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B3E3C729ED45DE004B0328 /* TodayJobSandboxView.swift */; };
 		00B3E3CA29ED579F004B0328 /* JobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B3E3C929ED579F004B0328 /* JobView.swift */; };
 		00EA722E29E97BA0003ABFFB /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA722D29E97BA0003ABFFB /* Transaction.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		005D893029F03D650042ECFD /* JobCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCardView.swift; sourceTree = "<group>"; };
+		005D893229F0492F0042ECFD /* JobEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobEmptyStateView.swift; sourceTree = "<group>"; };
 		00B3E3C729ED45DE004B0328 /* TodayJobSandboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayJobSandboxView.swift; sourceTree = "<group>"; };
 		00B3E3C929ED579F004B0328 /* JobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobView.swift; sourceTree = "<group>"; };
 		00EA722D29E97BA0003ABFFB /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				306B3EEA29E89A1000D636D5 /* JobListView.swift */,
 				306B3F1129EB079200D636D5 /* JobTodayView.swift */,
 				005D893029F03D650042ECFD /* JobCardView.swift */,
+				005D893229F0492F0042ECFD /* JobEmptyStateView.swift */,
 			);
 			path = Job;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				005D893329F0492F0042ECFD /* JobEmptyStateView.swift in Sources */,
 				005D893129F03D650042ECFD /* JobCardView.swift in Sources */,
 				306B3F1629EB0C6E00D636D5 /* ProfileInfoView.swift in Sources */,
 				306B3F1D29EF299B00D636D5 /* LatestTransactionCardView.swift in Sources */,

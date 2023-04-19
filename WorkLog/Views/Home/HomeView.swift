@@ -47,23 +47,26 @@ struct HomeView: View {
                 
                 ScrollView {
                     VStack(alignment: .leading) {
-                        Text("Jobs Today:")
+                        Text("Upcoming Jobs:")
                             .modifier(DashboardHeaderTextStyle())
                         
 
 //                            JobTodayView(description: "Change Light", location: "Hornchurch", customerName: "Mike Jones", jobTime: "10:00 - 12:00")
-                            TodayJobSandboxView(viewModel: JobViewModel())
+//                            TodayJobSandboxView(viewModel: JobViewModel())
+                        
+                        JobEmptyStateView()
+                            .padding(.bottom)
                         
 
                         
-                        Text("Monthly Profit & Loss:")
+                        Text("Profit & Loss:")
                             .modifier(DashboardHeaderTextStyle())
                         
                         VStack {
-                            VStack(alignment: .leading) {
+                            VStack {
                                 Text("£32,898.80")
                                     .font(.title2)
-                                    .fontWeight(.regular)
+                                    .fontWeight(.semibold)
                             }
                             VStack {
                                 ProfitLossChart()
@@ -73,37 +76,7 @@ struct HomeView: View {
                         .background(Color.white)
                         .modifier(DashboardComponentStyle())
                         
-//                        Text("Invoices:")
-//                            .modifier(DashboardHeaderTextStyle())
-//                        
-//                        VStack {
-//                            HStack {
-//                                VStack(alignment: .leading){
-//                                    Text("Unpaid Invoices")
-//                                        .fontWeight(.semibold)
-//                                    Text("1 Overdue")
-//                                        .foregroundColor(.red)
-//                                        .bold()
-//                                    Text("£1,000,000")
-//                                }
-//                                Spacer()
-//                                VStack {
-//                                    HStack {
-//                                        Image(systemName: "exclamationmark.circle.fill")
-//                                            .foregroundColor(Color("brand.blue.one"))
-//                                        Text("5 Pending")
-//                                            .font(.title3)
-//                                            .fontWeight(.light)
-//                                            .foregroundColor(Color("brand.blue.two"))
-//                                    }
-//                                }
-//                            }
-//                        }
-//                        .padding()
-//                        .background(Color.white)
-//                        .modifier(DashboardComponentStyle())
-                        
-                        
+
                         Spacer()
                     }
                     .padding(.horizontal)

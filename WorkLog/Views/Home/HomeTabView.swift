@@ -32,8 +32,8 @@ struct HomeTabView: View {
                 }
                 .tag("Two")
             
-//            TransactionHomeView(viewModel: TransactionViewModel())
-            TransactionsSandboxView()
+            TransactionHomeView(viewModel: TransactionViewModel())
+//            TransactionsSandboxView()
                 .tabItem {
                     Label("Finance", systemImage: "dollarsign.circle")
                 }

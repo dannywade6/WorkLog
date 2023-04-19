@@ -73,35 +73,35 @@ struct HomeView: View {
                         .background(Color.white)
                         .modifier(DashboardComponentStyle())
                         
-                        Text("Invoices:")
-                            .modifier(DashboardHeaderTextStyle())
-                        
-                        VStack {
-                            HStack {
-                                VStack(alignment: .leading){
-                                    Text("Unpaid Invoices")
-                                        .fontWeight(.semibold)
-                                    Text("1 Overdue")
-                                        .foregroundColor(.red)
-                                        .bold()
-                                    Text("£1,000,000")
-                                }
-                                Spacer()
-                                VStack {
-                                    HStack {
-                                        Image(systemName: "exclamationmark.circle.fill")
-                                            .foregroundColor(Color("brand.blue.one"))
-                                        Text("5 Pending")
-                                            .font(.title3)
-                                            .fontWeight(.light)
-                                            .foregroundColor(Color("brand.blue.two"))
-                                    }
-                                }
-                            }
-                        }
-                        .padding()
-                        .background(Color.white)
-                        .modifier(DashboardComponentStyle())
+//                        Text("Invoices:")
+//                            .modifier(DashboardHeaderTextStyle())
+//                        
+//                        VStack {
+//                            HStack {
+//                                VStack(alignment: .leading){
+//                                    Text("Unpaid Invoices")
+//                                        .fontWeight(.semibold)
+//                                    Text("1 Overdue")
+//                                        .foregroundColor(.red)
+//                                        .bold()
+//                                    Text("£1,000,000")
+//                                }
+//                                Spacer()
+//                                VStack {
+//                                    HStack {
+//                                        Image(systemName: "exclamationmark.circle.fill")
+//                                            .foregroundColor(Color("brand.blue.one"))
+//                                        Text("5 Pending")
+//                                            .font(.title3)
+//                                            .fontWeight(.light)
+//                                            .foregroundColor(Color("brand.blue.two"))
+//                                    }
+//                                }
+//                            }
+//                        }
+//                        .padding()
+//                        .background(Color.white)
+//                        .modifier(DashboardComponentStyle())
                         
                         
                         Spacer()

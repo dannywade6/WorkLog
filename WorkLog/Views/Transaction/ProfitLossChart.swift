@@ -28,8 +28,14 @@ let revenueData: [Revenue] = [
 
 struct ProfitLossChart: View {
     
-    let barColor1 = Color("brand.blue.one")
-    let barColor2 = Color("brand.blue.two")
+    var incomeGradient: LinearGradient {
+        LinearGradient(colors: [Color("brand.blue.one"), Color("brand.blue.two")], startPoint: .leading, endPoint: .trailing)
+    }
+    
+    var expenseGradient: LinearGradient {
+        LinearGradient(colors: [Color("brand.gray.one"), Color("brand.gray.two")], startPoint: .leading, endPoint: .trailing)
+    }
+
     
     var body: some View {
         VStack {
@@ -46,12 +52,14 @@ struct ProfitLossChart: View {
                         .font(.system(size: 12, weight: .bold))
                         .padding()
                 }
-                .foregroundStyle(.linearGradient(
-                    colors: [barColor1, barColor2],
-                    startPoint: .leading,
-                    endPoint: .trailing))
+                
+//                .foregroundStyle(.linearGradient(
+//                    colors: [barColor1, barColor2],
+//                    startPoint: .leading,
+//                    endPoint: .trailing))
                 .cornerRadius(10)
             }
+//            .chartForegroundStyleScale(["Income": incomeGradient, "Expense": expenseGradient])
             .chartXAxis(.hidden)
             
         }

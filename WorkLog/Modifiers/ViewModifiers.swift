@@ -37,6 +37,20 @@ struct DashboardHeaderTextStyle: ViewModifier {
     }
 }
 
+struct TransactionButtonStyle: ViewModifier {
+    
+    let color: Color
+    
+    func body(content: Content) -> some View {
+        content
+            .fontWeight(.semibold)
+            .foregroundColor(.white)
+            .padding(.horizontal)
+            .padding()
+            .background(color)
+            .cornerRadius(15)
+    }
+}
 
 
 

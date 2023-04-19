@@ -67,7 +67,6 @@ struct HomeView: View {
                             }
                             VStack {
                                 ProfitLossChart()
-                                    .frame(height: 130)
                             }
                         }
                         .padding(.vertical)

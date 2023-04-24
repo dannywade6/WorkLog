@@ -14,6 +14,7 @@ struct ProfitLossChart: View {
         (revenueType: "Expense", data: RevenueData.expenseAmount)
     ]
     
+    
     var incomeGradient: LinearGradient {
         LinearGradient(colors: [Color("brand.blue.one"), Color("brand.blue.two")], startPoint: .leading, endPoint: .trailing)
     }

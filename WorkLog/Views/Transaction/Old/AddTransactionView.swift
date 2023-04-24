@@ -15,7 +15,7 @@ struct AddTransactionView: View {
     @State private var isExpense = true
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             Form {
                 Section(header: Text("Amount")) {
                     TextField("Amount", text: $amount)
@@ -26,10 +26,10 @@ struct AddTransactionView: View {
                 }
                 Section {
                     Button("Save") {
-                        guard let amount = Double(amount) else { return }
-                        viewModel.addTransaction(amount: isExpense ? -amount : amount, isExpense: isExpense)
-                        resetInputFields()
-                        presentationMode.wrappedValue.dismiss()
+//                        guard let amount = Double(amount) else { return }
+//                        viewModel.addTransaction(amount: isExpense ? -amount : amount, isExpense: isExpense)
+//                        resetInputFields()
+//                        presentationMode.wrappedValue.dismiss()
                     }
                 }
             }

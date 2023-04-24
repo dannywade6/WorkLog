@@ -16,6 +16,8 @@
 		00EA723429E97D66003ABFFB /* AddTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA723329E97D66003ABFFB /* AddTransactionView.swift */; };
 		00EA723629E97F93003ABFFB /* TransactionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA723529E97F93003ABFFB /* TransactionListView.swift */; };
 		00EA723829E9811F003ABFFB /* TransactionHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA723729E9811F003ABFFB /* TransactionHomeView.swift */; };
+		305557C429F703750027A87C /* AllTransactionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305557C329F703750027A87C /* AllTransactionsListView.swift */; };
+		305557C729F70F7B0027A87C /* AddIncomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305557C629F70F7B0027A87C /* AddIncomeView.swift */; };
 		306B3EE329E897C300D636D5 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306B3EE229E897C300D636D5 /* Job.swift */; };
 		306B3EE629E8982F00D636D5 /* JobViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306B3EE529E8982F00D636D5 /* JobViewModel.swift */; };
 		306B3EE929E898BF00D636D5 /* AddJobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306B3EE829E898BF00D636D5 /* AddJobView.swift */; };
@@ -45,6 +47,8 @@
 		00EA723329E97D66003ABFFB /* AddTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionView.swift; sourceTree = "<group>"; };
 		00EA723529E97F93003ABFFB /* TransactionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListView.swift; sourceTree = "<group>"; };
 		00EA723729E9811F003ABFFB /* TransactionHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHomeView.swift; sourceTree = "<group>"; };
+		305557C329F703750027A87C /* AllTransactionsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTransactionsListView.swift; sourceTree = "<group>"; };
+		305557C629F70F7B0027A87C /* AddIncomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIncomeView.swift; sourceTree = "<group>"; };
 		306B3EE229E897C300D636D5 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		306B3EE529E8982F00D636D5 /* JobViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewModel.swift; sourceTree = "<group>"; };
 		306B3EE829E898BF00D636D5 /* AddJobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJobView.swift; sourceTree = "<group>"; };
@@ -100,11 +104,11 @@
 		00EA723229E97D36003ABFFB /* Transaction */ = {
 			isa = PBXGroup;
 			children = (
-				306B3F1E29EF343400D636D5 /* ProfitLossChart.swift */,
-				00EA723329E97D66003ABFFB /* AddTransactionView.swift */,
+				30F8E64929F7138400B83980 /* Old */,
+				30F8E64829F7134500B83980 /* ViewComponents */,
 				00EA723529E97F93003ABFFB /* TransactionListView.swift */,
-				00EA723729E9811F003ABFFB /* TransactionHomeView.swift */,
-				306B3F1C29EF299B00D636D5 /* LatestTransactionCardView.swift */,
+				305557C629F70F7B0027A87C /* AddIncomeView.swift */,
+				305557C329F703750027A87C /* AllTransactionsListView.swift */,
 			);
 			path = Transaction;
 			sourceTree = "<group>";
@@ -212,6 +216,24 @@
 			path = Modifiers;
 			sourceTree = "<group>";
 		};
+		30F8E64829F7134500B83980 /* ViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				306B3F1E29EF343400D636D5 /* ProfitLossChart.swift */,
+				306B3F1C29EF299B00D636D5 /* LatestTransactionCardView.swift */,
+			);
+			path = ViewComponents;
+			sourceTree = "<group>";
+		};
+		30F8E64929F7138400B83980 /* Old */ = {
+			isa = PBXGroup;
+			children = (
+				00EA723329E97D66003ABFFB /* AddTransactionView.swift */,
+				00EA723729E9811F003ABFFB /* TransactionHomeView.swift */,
+			);
+			path = Old;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -293,6 +315,7 @@
 				306B3F1629EB0C6E00D636D5 /* ProfileInfoView.swift in Sources */,
 				306B3F1D29EF299B00D636D5 /* LatestTransactionCardView.swift in Sources */,
 				00EA722E29E97BA0003ABFFB /* Transaction.swift in Sources */,
+				305557C729F70F7B0027A87C /* AddIncomeView.swift in Sources */,
 				00EA723429E97D66003ABFFB /* AddTransactionView.swift in Sources */,
 				30A555A929E5E2970009F240 /* ViewModifiers.swift in Sources */,
 				30A555A229E5B92D0009F240 /* HomeView.swift in Sources */,
@@ -305,6 +328,7 @@
 				306B3EEF29E8A1BD00D636D5 /* HomeTabView.swift in Sources */,
 				306B3EE929E898BF00D636D5 /* AddJobView.swift in Sources */,
 				306B3F1229EB079200D636D5 /* JobTodayView.swift in Sources */,
+				305557C429F703750027A87C /* AllTransactionsListView.swift in Sources */,
 				00B3E3CA29ED579F004B0328 /* JobView.swift in Sources */,
 				306B3EE329E897C300D636D5 /* Job.swift in Sources */,
 				306B3EEB29E89A1000D636D5 /* JobListView.swift in Sources */,

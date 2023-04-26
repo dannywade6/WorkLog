@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TransactionListView: View {
-    @ObservedObject var viewModel: TransactionViewModel
+    @StateObject var viewModel = Transaction2ViewModel()
     
     var body: some View {
         NavigationStack {
@@ -45,7 +45,8 @@ struct TransactionListView: View {
                 
                 HStack {
                     NavigationLink {
-                        AddIncomeView()
+                        //                        AddIncomeView()
+                        AddTransaction2View(viewModel: Transaction2ViewModel())
                     } label: {
                         Text("Add Income")
                             .modifier(TransactionButtonStyle(color: Color("brand.blue.two")))
@@ -83,33 +84,51 @@ struct TransactionListView: View {
                 }
                 
                 ScrollView {
-                    //                    VStack {
-//                                            LatestTransactionCardView(isExpense: false, transactionDescription: "Payment for Job", transactionBusiness: "Ian Smith", dayofWeek: "Wednesday", transactionAmount: "1,800.00")
-
-                    
                     VStack {
-                        List(viewModel.transactions) { transaction in
-                            VStack(alignment: .leading) {
-                                Text(transaction.description)
-                                Text(transaction.origin)
-                                Text(transaction.date, style: .date)
-                                Text("$\(transaction.amount)")
-//                                Text(transaction.type == .income ? "Income" : "Expense")
-                            }
-                        }
+                        LatestTransactionCardView(isExpense: false, transactionDescription: "Payment for Job", transactionBusiness: "Ian Smith", dayofWeek: "Wednesday", transactionAmount: "1,800.00")
+                        LatestTransactionCardView(isExpense: true, transactionDescription: "Travel", transactionBusiness: "Transport For London", dayofWeek: "Wednesday", transactionAmount: "14.20")
+                        LatestTransactionCardView(isExpense: true, transactionDescription: "Lunch", transactionBusiness: "Tesco", dayofWeek: "Wednesday", transactionAmount: "6.20")
                     }
-                    .padding(.horizontal)
                 }
-                .scrollIndicators(.hidden)
+                    .padding(.horizontal)
+                    .navigationTitle("Transactions")
             }
-            .navigationTitle("Transactions")
+            .scrollIndicators(.hidden)
         }
+        
     }
+//}
 }
 
 
 struct TransactionListView_Previews: PreviewProvider {
     static var previews: some View {
-        TransactionListView(viewModel: TransactionViewModel())
+        TransactionListView()
     }
 }
+
+
+//                    if viewModel.transaction2.isEmpty {
+//                        Text("Empty Array")
+//                    } else {
+//                        Text("Existing Items")
+//                    }
+//                    List {
+//                        ForEach(viewModel.transaction2) { transaction2 in
+//                            Text(transaction2.description)
+//                            Text(transaction2.origin)
+//                        }
+//                    }
+
+
+
+
+//                        List(viewModel.transactions) { transaction in
+//                            VStack(alignment: .leading) {
+//                                Text(transaction.description)
+//                                Text(transaction.origin)
+//                                Text(transaction.date, style: .date)
+//                                Text("$\(transaction.amount)")
+////                                Text(transaction.type == .income ? "Income" : "Expense")
+//                            }
+//                        }

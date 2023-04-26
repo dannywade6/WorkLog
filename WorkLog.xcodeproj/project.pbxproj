@@ -16,6 +16,9 @@
 		00EA723429E97D66003ABFFB /* AddTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA723329E97D66003ABFFB /* AddTransactionView.swift */; };
 		00EA723629E97F93003ABFFB /* TransactionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA723529E97F93003ABFFB /* TransactionListView.swift */; };
 		00EA723829E9811F003ABFFB /* TransactionHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA723729E9811F003ABFFB /* TransactionHomeView.swift */; };
+		3033BB0B29F86EA0004D47BE /* Transaction2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033BB0A29F86EA0004D47BE /* Transaction2.swift */; };
+		3033BB0D29F86EAD004D47BE /* Transaction2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033BB0C29F86EAD004D47BE /* Transaction2ViewModel.swift */; };
+		3033BB0F29F86F78004D47BE /* AddTransaction2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033BB0E29F86F78004D47BE /* AddTransaction2View.swift */; };
 		305557C429F703750027A87C /* AllTransactionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305557C329F703750027A87C /* AllTransactionsListView.swift */; };
 		305557C729F70F7B0027A87C /* AddIncomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305557C629F70F7B0027A87C /* AddIncomeView.swift */; };
 		306B3EE329E897C300D636D5 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306B3EE229E897C300D636D5 /* Job.swift */; };
@@ -47,6 +50,9 @@
 		00EA723329E97D66003ABFFB /* AddTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionView.swift; sourceTree = "<group>"; };
 		00EA723529E97F93003ABFFB /* TransactionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListView.swift; sourceTree = "<group>"; };
 		00EA723729E9811F003ABFFB /* TransactionHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHomeView.swift; sourceTree = "<group>"; };
+		3033BB0A29F86EA0004D47BE /* Transaction2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction2.swift; sourceTree = "<group>"; };
+		3033BB0C29F86EAD004D47BE /* Transaction2ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction2ViewModel.swift; sourceTree = "<group>"; };
+		3033BB0E29F86F78004D47BE /* AddTransaction2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransaction2View.swift; sourceTree = "<group>"; };
 		305557C329F703750027A87C /* AllTransactionsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTransactionsListView.swift; sourceTree = "<group>"; };
 		305557C629F70F7B0027A87C /* AddIncomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIncomeView.swift; sourceTree = "<group>"; };
 		306B3EE229E897C300D636D5 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
@@ -109,6 +115,7 @@
 				00EA723529E97F93003ABFFB /* TransactionListView.swift */,
 				305557C629F70F7B0027A87C /* AddIncomeView.swift */,
 				305557C329F703750027A87C /* AllTransactionsListView.swift */,
+				3033BB0E29F86F78004D47BE /* AddTransaction2View.swift */,
 			);
 			path = Transaction;
 			sourceTree = "<group>";
@@ -118,6 +125,7 @@
 			children = (
 				306B3EE229E897C300D636D5 /* Job.swift */,
 				00EA722D29E97BA0003ABFFB /* Transaction.swift */,
+				3033BB0A29F86EA0004D47BE /* Transaction2.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -127,6 +135,7 @@
 			children = (
 				306B3EE529E8982F00D636D5 /* JobViewModel.swift */,
 				00EA722F29E97BCA003ABFFB /* TransactionViewModel.swift */,
+				3033BB0C29F86EAD004D47BE /* Transaction2ViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -318,11 +327,14 @@
 				305557C729F70F7B0027A87C /* AddIncomeView.swift in Sources */,
 				00EA723429E97D66003ABFFB /* AddTransactionView.swift in Sources */,
 				30A555A929E5E2970009F240 /* ViewModifiers.swift in Sources */,
+				3033BB0F29F86F78004D47BE /* AddTransaction2View.swift in Sources */,
 				30A555A229E5B92D0009F240 /* HomeView.swift in Sources */,
 				306B3F1929EDE77500D636D5 /* OnboardingView.swift in Sources */,
 				30A5559629E5B9150009F240 /* ContentView.swift in Sources */,
 				00EA723629E97F93003ABFFB /* TransactionListView.swift in Sources */,
 				30A5559429E5B9150009F240 /* WorkLogApp.swift in Sources */,
+				3033BB0B29F86EA0004D47BE /* Transaction2.swift in Sources */,
+				3033BB0D29F86EAD004D47BE /* Transaction2ViewModel.swift in Sources */,
 				306B3EE629E8982F00D636D5 /* JobViewModel.swift in Sources */,
 				00EA723829E9811F003ABFFB /* TransactionHomeView.swift in Sources */,
 				306B3EEF29E8A1BD00D636D5 /* HomeTabView.swift in Sources */,

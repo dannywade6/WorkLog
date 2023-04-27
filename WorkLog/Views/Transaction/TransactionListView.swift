@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct TransactionListView: View {
-    @StateObject var viewModel = Transaction2ViewModel()
+    
+    @EnvironmentObject var viewModel: Transaction2ViewModel
     
     var body: some View {
         NavigationStack {
             VStack {
-                
                 VStack(alignment: .leading, spacing: -5) {
                     Text("Current Profit")
                         .foregroundColor(.gray)
@@ -44,17 +44,14 @@ struct TransactionListView: View {
                 }
                 
                 HStack {
-                    NavigationLink {
-                        //                        AddIncomeView()
-                        AddTransaction2View(viewModel: Transaction2ViewModel())
-                    } label: {
+                    NavigationLink(destination: AddTransaction2View().environmentObject(viewModel)) {
                         Text("Add Income")
                             .modifier(TransactionButtonStyle(color: Color("brand.blue.two")))
                     }
                     
                     // Add Income
                     NavigationLink {
-                        AddTransactionView(viewModel: TransactionViewModel())
+                        //                        AddTransactionView(viewModel: TransactionViewModel())
                     } label: {
                         Text("Add Expense")
                             .foregroundColor(.black)
@@ -85,25 +82,26 @@ struct TransactionListView: View {
                 
                 ScrollView {
                     VStack {
-                        LatestTransactionCardView(isExpense: false, transactionDescription: "Payment for Job", transactionBusiness: "Ian Smith", dayofWeek: "Wednesday", transactionAmount: "1,800.00")
-                        LatestTransactionCardView(isExpense: true, transactionDescription: "Travel", transactionBusiness: "Transport For London", dayofWeek: "Wednesday", transactionAmount: "14.20")
-                        LatestTransactionCardView(isExpense: true, transactionDescription: "Lunch", transactionBusiness: "Tesco", dayofWeek: "Wednesday", transactionAmount: "6.20")
+                        ForEach(viewModel.transaction2) { transaction in
+                            LatestTransactionCardView(transactionDescription: transaction.description, transactionOrigin: transaction.origin, transactionAmount: transaction.amount, transactionDate: transaction.date, selectedTransaction: ))
+                            // Fix Error
+                        }
                     }
                 }
-                    .padding(.horizontal)
-                    .navigationTitle("Transactions")
+                .padding(.horizontal)
+                .navigationTitle("Transactions")
             }
             .scrollIndicators(.hidden)
         }
         
     }
-//}
 }
 
 
 struct TransactionListView_Previews: PreviewProvider {
     static var previews: some View {
         TransactionListView()
+            .environmentObject(Transaction2ViewModel())
     }
 }
 

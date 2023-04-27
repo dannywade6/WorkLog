@@ -30,13 +30,13 @@ struct AllTransactionsListView: View {
             
             ScrollView {
                     VStack {
-                        LatestTransactionCardView(isExpense: false, transactionDescription: "Payment for Job", transactionBusiness: "Ian Smith", dayofWeek: "Wednesday", transactionAmount: "1,800.00")
-                        
-                        LatestTransactionCardView(isExpense: true, transactionDescription: "Materials", transactionBusiness: "Wickes", dayofWeek: "Tuesday", transactionAmount: "400.00")
-                        
-                        LatestTransactionCardView(isExpense: true, transactionDescription: "Wages", transactionBusiness: "Myself", dayofWeek: "Monday", transactionAmount: "150.00")
-                        
-                        LatestTransactionCardView(isExpense: false, transactionDescription: "Sale of Van", transactionBusiness: "WeBuyAnyCar", dayofWeek: "Monday", transactionAmount: "8,000.00")
+//                        LatestTransactionCardView(isExpense: false, transactionDescription: "Payment for Job", transactionOrigin: "Ian Smith", dayofWeek: "Wednesday", transactionAmount: "1,800.00")
+//                        
+//                        LatestTransactionCardView(isExpense: true, transactionDescription: "Materials", transactionOrigin: "Wickes", dayofWeek: "Tuesday", transactionAmount: "400.00")
+//                        
+//                        LatestTransactionCardView(isExpense: true, transactionDescription: "Wages", transactionOrigin: "Myself", dayofWeek: "Monday", transactionAmount: "150.00")
+//                        
+//                        LatestTransactionCardView(isExpense: false, transactionDescription: "Sale of Van", transactionOrigin: "WeBuyAnyCar", dayofWeek: "Monday", transactionAmount: "8,000.00")
                     }
                 .padding(.horizontal)
             }

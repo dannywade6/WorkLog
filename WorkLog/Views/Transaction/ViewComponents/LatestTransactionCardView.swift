@@ -9,19 +9,25 @@ import SwiftUI
 
 struct LatestTransactionCardView: View {
     
-    var isExpense: Bool
     var transactionDescription: String
-    var transactionBusiness: String
-    var dayofWeek: String
-    var transactionAmount: String
+    var transactionOrigin: String
+    var transactionAmount: Double
+    var transactionDate: Date
     
+    enum transactionType {
+        case income
+        case expense
+    }
+    
+    var selectedTransaction: transactionType
     
     var body: some View {
         VStack {
             HStack {
                 HStack {
-                    Image(systemName: isExpense ? "arrow.down.square.fill" : "arrow.up.square.fill")
-                        .foregroundColor(isExpense ? .red : .green)
+                    Image(systemName: selectedTransaction == .expense ? "arrow.down.square.fill" : "arrow.up.square.fill")
+                        .foregroundColor(selectedTransaction == .expense ? .red : .green)
+                        .foregroundColor(.red)
                         .font(.largeTitle)
                     
                     HStack(alignment: .top) {
@@ -29,17 +35,17 @@ struct LatestTransactionCardView: View {
                             Text(transactionDescription)
                                 .font(.headline)
                                 .bold()
-                            Text(transactionBusiness)
+                            Text(transactionOrigin)
                                 .font(.callout)
                                 .foregroundColor(.gray)
-                            Text(dayofWeek)
+                            Text("\(transactionDate.formatted(date: .abbreviated, time: .omitted))")
                                 .font(.callout)
                                 .foregroundColor(.gray)
                         }
                         
                         Spacer()
                         
-                        Text(isExpense ? "- £\(transactionAmount)" : "+ £\(transactionAmount)")
+                        Text(selectedTransaction == .expense ? "- £\(transactionAmount)" : "+ £\(transactionAmount)")
                             .font(.headline)
                             .bold()
                         
@@ -53,6 +59,6 @@ struct LatestTransactionCardView: View {
 
 struct LatestTransactionCardView_Previews: PreviewProvider {
     static var previews: some View {
-        LatestTransactionCardView(isExpense: true, transactionDescription: "Purchase Drill", transactionBusiness: "B&Q", dayofWeek: "Wednesday", transactionAmount: "299.99")
+        LatestTransactionCardView(transactionDescription: "Lunch", transactionOrigin: "Tesco", transactionAmount: 12.22, transactionDate: Date(), selectedTransaction: .income)
     }
 }

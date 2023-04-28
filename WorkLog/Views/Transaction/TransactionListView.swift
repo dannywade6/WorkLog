@@ -14,35 +14,7 @@ struct TransactionListView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                VStack(alignment: .leading, spacing: -5) {
-                    Text("Current Profit")
-                        .foregroundColor(.gray)
-                        .font(.subheadline)
-                        .padding(.leading)
-                        .padding(.bottom, 5)
-                    HStack(alignment: .bottom) {
-                        Text("£700.00")
-                            .font(.title)
-                            .fontWeight(.semibold)
-                            .padding(.leading)
-                        
-                        Spacer()
-                        
-                        Menu(content: {
-                            // Menu
-                        }, label: {
-                            HStack {
-                                Image(systemName: "calendar")
-                                Text("Last 7 Days")
-                            }
-                            .foregroundColor(Color("brand.blue.one"))
-                        })
-                        .padding(.trailing)
-                        
-                        
-                    }
-                    ProfitLossChart()
-                }
+                ProfitLossChart()
                 
                 HStack {
                     // Add Income
@@ -67,7 +39,6 @@ struct TransactionListView: View {
                         .modifier(DashboardTitleTextStyle())
                         .padding(.leading)
                     Spacer()
-                    
                     
                     if !viewModel.transaction.isEmpty {
                         NavigationLink(destination: AllTransactionsListView().environmentObject(viewModel)) {

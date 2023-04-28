@@ -37,16 +37,11 @@ struct HomeView: View {
                         
                         VStack {
                             VStack {
-                                Text("£700.00")
-                                    .font(.title2)
-                                    .fontWeight(.semibold)
-                            }
-                            VStack {
                                 ProfitLossChart()
                                     .frame(height: 250)
                             }
                         }
-                        .padding(.vertical)
+                        .padding(.top)
                         .background(Color.white)
                         .modifier(DashboardComponentStyle())
                         

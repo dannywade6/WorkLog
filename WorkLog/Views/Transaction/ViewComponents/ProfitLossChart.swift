@@ -24,7 +24,39 @@ struct ProfitLossChart: View {
     }
     
     var body: some View {
+        VStack {
+            HStack(alignment: .bottom) {
+                // Profit Info
+                VStack(alignment: .leading, spacing: -5) {
+                    Text("Current Profit")
+                        .foregroundColor(.gray)
+                        .font(.subheadline)
+                        .padding(.leading)
+                        .padding(.bottom, 5)
+                    HStack {
+                        Text("£700.00")
+                            .font(.title)
+                            .fontWeight(.semibold)
+                            .padding(.leading)
+                        
+                        Spacer()
+                        
+                        Menu(content: {
+                            // Menu
+                        }, label: {
+                            HStack {
+                                Image(systemName: "calendar")
+                                Text("Last 7 Days")
+                            }
+                            .foregroundColor(Color("brand.blue.one"))
+                        })
+                        .padding(.trailing)
+                    }
+                }
+            }
+            
             VStack {
+                // Chart Info
                 Chart {
                     ForEach(revenueData, id: \.revenueType) { element in
                         ForEach(element.data) {
@@ -40,9 +72,11 @@ struct ProfitLossChart: View {
                 .chartForegroundStyleScale(["Income": incomeGradient, "Expense": expenseGradient])
                 .chartLegend(.hidden)
             }
-            .padding()
+            .padding(.horizontal)
+            .padding(.bottom)
         }
     }
+}
 
 struct ProfitLossChart_Previews: PreviewProvider {
     static var previews: some View {
@@ -70,3 +104,5 @@ extension RevenueData {
         .init(incomeExpenseType: .expense, amount: 200)
     ]
 }
+
+

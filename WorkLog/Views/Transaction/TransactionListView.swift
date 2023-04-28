@@ -11,10 +11,16 @@ struct TransactionListView: View {
     
     @EnvironmentObject var viewModel: TransactionViewModel
     
+   
+    
     var body: some View {
         NavigationStack {
             VStack {
                 ProfitLossChart()
+
+//                Text("Total Income: \(viewModel.totalIncomeAmount())")
+//                Text("Total Expense: \(viewModel.totalExpenseAmount())")
+//                Text("Total Amount: \(viewModel.totalProfitOrLoss())")
                 
                 HStack {
                     // Add Income
@@ -52,6 +58,8 @@ struct TransactionListView: View {
                 
                 ScrollView {
                     VStack {
+                        
+                        
                         if viewModel.transaction .isEmpty {
                             EmptyStateView().scrollDisabled(true)
                         } else {

@@ -9,6 +9,10 @@ import SwiftUI
 import Charts
 
 struct ProfitLossChart: View {
+    
+    @EnvironmentObject var viewModel: TransactionViewModel
+    
+    
     let revenueData = [
         (revenueType: "Income", data: RevenueData.incomeAmount),
         (revenueType: "Expense", data: RevenueData.expenseAmount)
@@ -28,13 +32,13 @@ struct ProfitLossChart: View {
             HStack(alignment: .bottom) {
                 // Profit Info
                 VStack(alignment: .leading, spacing: -5) {
-                    Text("Current Profit")
+                    Text("\(viewModel.totalProfitOrLoss() < 0 ? "Total Loss" : "Total Profit")")
                         .foregroundColor(.gray)
                         .font(.subheadline)
                         .padding(.leading)
                         .padding(.bottom, 5)
                     HStack {
-                        Text("£700.00")
+                        Text("\(viewModel.formatCurrency(viewModel.totalProfitOrLoss()))")
                             .font(.title)
                             .fontWeight(.semibold)
                             .padding(.leading)
@@ -81,13 +85,14 @@ struct ProfitLossChart: View {
 struct ProfitLossChart_Previews: PreviewProvider {
     static var previews: some View {
         ProfitLossChart()
+            .environmentObject(TransactionViewModel())
     }
 }
 
 struct RevenueData: Identifiable {
     let id = UUID()
     let incomeExpenseType: IncomeOrExpense
-    let amount: Int
+    let amount: Double
     
     enum IncomeOrExpense: String {
         case income = "Income"
@@ -97,11 +102,11 @@ struct RevenueData: Identifiable {
 
 extension RevenueData {
     static let incomeAmount: [RevenueData] = [
-        .init(incomeExpenseType: .income, amount: 900)
+        .init(incomeExpenseType: .income, amount: 900.22)
     ]
     
     static let expenseAmount: [RevenueData] = [
-        .init(incomeExpenseType: .expense, amount: 200)
+        .init(incomeExpenseType: .expense, amount: 200.44)
     ]
 }
 

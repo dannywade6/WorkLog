@@ -51,7 +51,7 @@ struct AddIncomeView: View {
                 }
                 
                 Button {
-                    viewModel.addTransaction2(description: incomeDescription, origin: incomeOrigin, date: incomeDate, amount: incomeAmount, isExpense: false, formattedCurrency: formatCurrency(incomeAmount))
+                    viewModel.addTransaction(description: incomeDescription, origin: incomeOrigin, date: incomeDate, amount: incomeAmount, isExpense: false, formattedCurrency: viewModel.formatCurrency(incomeAmount))
                     resetFields()
                 } label: {
                     Text("Add Income")
@@ -61,15 +61,6 @@ struct AddIncomeView: View {
             .navigationTitle("Add Income")
         }
     }
-    
-    func formatCurrency(_ amount: Double) -> String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.currencyCode = "GBP"
-        formatter.maximumFractionDigits = 2
-        return formatter.string(from: NSNumber(value: amount)) ?? "£0.00"
-    }
-    
     
     func resetFields() {
         incomeDescription = ""

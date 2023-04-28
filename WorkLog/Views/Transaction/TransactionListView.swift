@@ -38,6 +38,8 @@ struct TransactionListView: View {
                             .foregroundColor(Color("brand.blue.one"))
                         })
                         .padding(.trailing)
+                        
+                        
                     }
                     ProfitLossChart()
                 }

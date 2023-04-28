@@ -30,15 +30,7 @@ struct HomeView: View {
                     VStack(alignment: .leading) {
                         Text("Upcoming Jobs:")
                             .modifier(DashboardHeaderTextStyle())
-                        
-                        
-                        //                            JobTodayView(description: "Change Light", location: "Hornchurch", customerName: "Mike Jones", jobTime: "10:00 - 12:00")
                         TodayJobSandboxView(viewModel: JobViewModel())
-                        
-//                                                JobEmptyStateView()
-//                                                    .padding(.bottom)
-                        
-                        
                         
                         Text("Profit & Loss:")
                             .modifier(DashboardHeaderTextStyle())
@@ -72,7 +64,6 @@ struct HomeView: View {
                     Image(systemName: "person.crop.circle.fill")
                         .foregroundColor(Color("brand.blue.two"))
                         .font(.largeTitle)
-                        .fontWeight(.medium)
                 }
                 .fullScreenCover(isPresented: $showProfileInfoView) {
                     ProfileInfoView()

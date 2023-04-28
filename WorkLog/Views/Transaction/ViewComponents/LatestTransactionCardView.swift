@@ -27,7 +27,6 @@ struct LatestTransactionCardView: View {
         VStack {
             HStack {
                 HStack {
-//                    Image(systemName: selectedTransaction == .expense ? "arrow.down.square.fill" : "arrow.up.square.fill")
                     Image(systemName: isExpense ? "arrow.down.square.fill" : "arrow.up.square.fill")
                         .foregroundColor(isExpense ? .red : .green)
                         .foregroundColor(.red)
@@ -47,8 +46,6 @@ struct LatestTransactionCardView: View {
                         }
                         
                         Spacer()
-                        
-//                        Text(selectedTransaction == .expense ? "- £\(transactionAmount)" : "+ £\(transactionAmount)")
                         Text(isExpense ? "- £\(transactionAmount)" : "+ £\(transactionAmount)")
                             .font(.headline)
                             .bold()

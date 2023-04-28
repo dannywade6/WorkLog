@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TransactionListView: View {
     
-    @EnvironmentObject var viewModel: Transaction2ViewModel
+    @EnvironmentObject var viewModel: TransactionViewModel
     
     var body: some View {
         NavigationStack {
@@ -76,8 +76,12 @@ struct TransactionListView: View {
                 
                 ScrollView {
                     VStack {
-                        ForEach(viewModel.transaction2) { transaction in
-                            LatestTransactionCardView(transactionDescription: transaction.description, transactionOrigin: transaction.origin, transactionAmount: transaction.amount, transactionDate: transaction.date, isExpense: transaction.isExpense)
+                        if viewModel.transaction .isEmpty {
+                            EmptyStateView().scrollDisabled(true)
+                        } else {
+                            ForEach(viewModel.transaction) { transaction in
+                                LatestTransactionCardView(transactionDescription: transaction.description, transactionOrigin: transaction.origin, transactionAmount: transaction.amount, transactionDate: transaction.date, isExpense: transaction.isExpense)
+                            }
                         }
                     }
                 }
@@ -94,6 +98,6 @@ struct TransactionListView: View {
 struct TransactionListView_Previews: PreviewProvider {
     static var previews: some View {
         TransactionListView()
-            .environmentObject(Transaction2ViewModel())
+            .environmentObject(TransactionViewModel())
     }
 }

@@ -8,15 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		00503DCC29FBACB30015AEF4 /* AddExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00503DCB29FBACB30015AEF4 /* AddExpenseView.swift */; };
+		00503DCF29FBF3F40015AEF4 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00503DCE29FBF3F40015AEF4 /* EmptyStateView.swift */; };
 		005D893129F03D650042ECFD /* JobCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D893029F03D650042ECFD /* JobCardView.swift */; };
 		005D893329F0492F0042ECFD /* JobEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D893229F0492F0042ECFD /* JobEmptyStateView.swift */; };
 		00B3E3C829ED45DE004B0328 /* TodayJobSandboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B3E3C729ED45DE004B0328 /* TodayJobSandboxView.swift */; };
 		00B3E3CA29ED579F004B0328 /* JobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B3E3C929ED579F004B0328 /* JobView.swift */; };
-		00EA722E29E97BA0003ABFFB /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA722D29E97BA0003ABFFB /* Transaction.swift */; };
-		00EA723029E97BCA003ABFFB /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA722F29E97BCA003ABFFB /* TransactionViewModel.swift */; };
 		00EA723629E97F93003ABFFB /* TransactionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA723529E97F93003ABFFB /* TransactionListView.swift */; };
-		3033BB0B29F86EA0004D47BE /* Transaction2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033BB0A29F86EA0004D47BE /* Transaction2.swift */; };
-		3033BB0D29F86EAD004D47BE /* Transaction2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033BB0C29F86EAD004D47BE /* Transaction2ViewModel.swift */; };
+		3033BB0B29F86EA0004D47BE /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033BB0A29F86EA0004D47BE /* Transaction.swift */; };
+		3033BB0D29F86EAD004D47BE /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033BB0C29F86EAD004D47BE /* TransactionViewModel.swift */; };
 		3033BB0F29F86F78004D47BE /* AddIncomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033BB0E29F86F78004D47BE /* AddIncomeView.swift */; };
 		305557C429F703750027A87C /* AllTransactionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305557C329F703750027A87C /* AllTransactionsListView.swift */; };
 		306B3EE329E897C300D636D5 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306B3EE229E897C300D636D5 /* Job.swift */; };
@@ -40,15 +39,14 @@
 
 /* Begin PBXFileReference section */
 		00503DCB29FBACB30015AEF4 /* AddExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseView.swift; sourceTree = "<group>"; };
+		00503DCE29FBF3F40015AEF4 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		005D893029F03D650042ECFD /* JobCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCardView.swift; sourceTree = "<group>"; };
 		005D893229F0492F0042ECFD /* JobEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobEmptyStateView.swift; sourceTree = "<group>"; };
 		00B3E3C729ED45DE004B0328 /* TodayJobSandboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayJobSandboxView.swift; sourceTree = "<group>"; };
 		00B3E3C929ED579F004B0328 /* JobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobView.swift; sourceTree = "<group>"; };
-		00EA722D29E97BA0003ABFFB /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
-		00EA722F29E97BCA003ABFFB /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
 		00EA723529E97F93003ABFFB /* TransactionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListView.swift; sourceTree = "<group>"; };
-		3033BB0A29F86EA0004D47BE /* Transaction2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction2.swift; sourceTree = "<group>"; };
-		3033BB0C29F86EAD004D47BE /* Transaction2ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction2ViewModel.swift; sourceTree = "<group>"; };
+		3033BB0A29F86EA0004D47BE /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		3033BB0C29F86EAD004D47BE /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
 		3033BB0E29F86F78004D47BE /* AddIncomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIncomeView.swift; sourceTree = "<group>"; };
 		305557C329F703750027A87C /* AllTransactionsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTransactionsListView.swift; sourceTree = "<group>"; };
 		306B3EE229E897C300D636D5 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
@@ -91,6 +89,14 @@
 			path = RecordTransactions;
 			sourceTree = "<group>";
 		};
+		00503DCD29FBF3EC0015AEF4 /* Various */ = {
+			isa = PBXGroup;
+			children = (
+				00503DCE29FBF3F40015AEF4 /* EmptyStateView.swift */,
+			);
+			path = Various;
+			sourceTree = "<group>";
+		};
 		00B3E3CD29ED8450004B0328 /* TempFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,8 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				306B3EE229E897C300D636D5 /* Job.swift */,
-				00EA722D29E97BA0003ABFFB /* Transaction.swift */,
-				3033BB0A29F86EA0004D47BE /* Transaction2.swift */,
+				3033BB0A29F86EA0004D47BE /* Transaction.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -137,8 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				306B3EE529E8982F00D636D5 /* JobViewModel.swift */,
-				00EA722F29E97BCA003ABFFB /* TransactionViewModel.swift */,
-				3033BB0C29F86EAD004D47BE /* Transaction2ViewModel.swift */,
+				3033BB0C29F86EAD004D47BE /* TransactionViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -146,6 +150,7 @@
 		306B3EE729E898AC00D636D5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				00503DCD29FBF3EC0015AEF4 /* Various */,
 				306B3F1429EB0C6200D636D5 /* Profile */,
 				306B3F1329EB091A00D636D5 /* Home */,
 				00EA723229E97D36003ABFFB /* Transaction */,
@@ -317,7 +322,6 @@
 				005D893129F03D650042ECFD /* JobCardView.swift in Sources */,
 				306B3F1629EB0C6E00D636D5 /* ProfileInfoView.swift in Sources */,
 				306B3F1D29EF299B00D636D5 /* LatestTransactionCardView.swift in Sources */,
-				00EA722E29E97BA0003ABFFB /* Transaction.swift in Sources */,
 				30A555A929E5E2970009F240 /* ViewModifiers.swift in Sources */,
 				3033BB0F29F86F78004D47BE /* AddIncomeView.swift in Sources */,
 				30A555A229E5B92D0009F240 /* HomeView.swift in Sources */,
@@ -326,8 +330,9 @@
 				00503DCC29FBACB30015AEF4 /* AddExpenseView.swift in Sources */,
 				00EA723629E97F93003ABFFB /* TransactionListView.swift in Sources */,
 				30A5559429E5B9150009F240 /* WorkLogApp.swift in Sources */,
-				3033BB0B29F86EA0004D47BE /* Transaction2.swift in Sources */,
-				3033BB0D29F86EAD004D47BE /* Transaction2ViewModel.swift in Sources */,
+				00503DCF29FBF3F40015AEF4 /* EmptyStateView.swift in Sources */,
+				3033BB0B29F86EA0004D47BE /* Transaction.swift in Sources */,
+				3033BB0D29F86EAD004D47BE /* TransactionViewModel.swift in Sources */,
 				306B3EE629E8982F00D636D5 /* JobViewModel.swift in Sources */,
 				306B3EEF29E8A1BD00D636D5 /* HomeTabView.swift in Sources */,
 				306B3EE929E898BF00D636D5 /* AddJobView.swift in Sources */,
@@ -338,7 +343,6 @@
 				306B3EEB29E89A1000D636D5 /* JobListView.swift in Sources */,
 				00B3E3C829ED45DE004B0328 /* TodayJobSandboxView.swift in Sources */,
 				306B3F1F29EF343400D636D5 /* ProfitLossChart.swift in Sources */,
-				00EA723029E97BCA003ABFFB /* TransactionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

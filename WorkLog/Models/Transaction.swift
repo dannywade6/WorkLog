@@ -1,31 +1,17 @@
 //
-//  Transaction.swift
+//  Transaction2.swift
 //  WorkLog
 //
-//  Created by Danny Wade on 14/04/2023.
+//  Created by Danny Wade on 25/04/2023.
 //
 
 import Foundation
 
-//enum TransactionType {
-//    case income
-//    case expense
-//}
-
 struct Transaction: Identifiable {
-    var id = UUID()
+    let id = UUID()
     var description: String
     var origin: String
     var date: Date
     var amount: Double
-//    var type: TransactionType
-//    var type: TransactionViewModel.TransactionType
+    var isExpense: Bool
 }
-
-
-
-
-//    let amount: Double
-//    let date: Date
-//    let isExpense: Bool
-//}

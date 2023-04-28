@@ -9,10 +9,10 @@ import SwiftUI
 
 struct AddIncomeView: View {
     
-    @EnvironmentObject var viewModel: Transaction2ViewModel
+    @EnvironmentObject var viewModel: TransactionViewModel
     
-    @State var income2Description = ""
-    @State var income2Origin = ""
+    @State var incomeDescription = ""
+    @State var incomeOrigin = ""
     @State var incomeDate = Date()
     @State var incomeAmount: Double = 0.00
     
@@ -30,10 +30,10 @@ struct AddIncomeView: View {
         NavigationStack {
             Form {
                 Section(header: Text("Income Description")) {
-                    TextField("Description", text: $income2Description)
+                    TextField("Description", text: $incomeDescription)
                 }
                 Section(header: Text("Income Origin")) {
-                    TextField("Source of Income", text: $income2Origin)
+                    TextField("Source of Income", text: $incomeOrigin)
                 }
                 Section(header: Text("Date of Payment")) {
                     HStack {
@@ -46,7 +46,8 @@ struct AddIncomeView: View {
                 }
                 
                 Button {
-                    viewModel.addTransaction2(description: income2Description, origin: income2Origin, date: incomeDate, amount: incomeAmount, isExpense: false)
+                    viewModel.addTransaction2(description: incomeDescription, origin: incomeOrigin, date: incomeDate, amount: incomeAmount, isExpense: false)
+                    resetFields()
                 } label: {
                     Text("Add Income")
                 }
@@ -56,8 +57,8 @@ struct AddIncomeView: View {
         }
     }
     func resetFields() {
-        income2Description = ""
-        income2Origin = ""
+        incomeDescription = ""
+        incomeOrigin = ""
         incomeDate = Date()
         incomeAmount = 0.00
     }
@@ -66,5 +67,6 @@ struct AddIncomeView: View {
 struct AddTransaction2View_Previews: PreviewProvider {
     static var previews: some View {
         AddIncomeView()
+            .environmentObject(TransactionViewModel())
     }
 }

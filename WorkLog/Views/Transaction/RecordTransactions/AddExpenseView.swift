@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddExpenseView: View {
     
-    @EnvironmentObject var viewModel: Transaction2ViewModel
+    @EnvironmentObject var viewModel: TransactionViewModel
     
     @State private var expenseDescription = ""
     @State private var expenseOrigin = ""
@@ -46,6 +46,7 @@ struct AddExpenseView: View {
                 
                 Button {
                     viewModel.addTransaction2(description: expenseDescription, origin: expenseOrigin, date: expenseDate, amount: expenseAmount, isExpense: true)
+                    resetFields()
                 } label: {
                     Text("Add Expense")
                 }
@@ -53,20 +54,17 @@ struct AddExpenseView: View {
             .navigationTitle("Add Expense")
         }
     }
+    func resetFields() {
+        expenseDescription = ""
+        expenseOrigin = ""
+        expenseDate = Date()
+        expenseAmount = 0.00
+    }
 }
 
 struct AddExpenseView_Previews: PreviewProvider {
     static var previews: some View {
         AddExpenseView()
+            .environmentObject(TransactionViewModel())
     }
 }
-
-//
-//            Button {
-//                viewModel.addTransaction2(description: income2Description, origin: income2Origin, date: incomeDate, amount: incomeAmount, isExpense: false)
-//            } label: {
-//                Text("Add Income")
-//            }
-//
-//        }
-

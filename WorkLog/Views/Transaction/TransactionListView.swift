@@ -39,26 +39,22 @@ struct TransactionListView: View {
                         })
                         .padding(.trailing)
                     }
-                    
                     ProfitLossChart()
                 }
                 
                 HStack {
-                    NavigationLink(destination: AddTransaction2View().environmentObject(viewModel)) {
+                    // Add Income
+                    NavigationLink(destination:AddIncomeView().environmentObject(viewModel)) {
                         Text("Add Income")
                             .modifier(TransactionButtonStyle(color: Color("brand.blue.two")))
                     }
                     
-                    // Add Income
-                    NavigationLink {
-                        //                        AddTransactionView(viewModel: TransactionViewModel())
-                    } label: {
+                    // Add Expense
+                    NavigationLink(destination:AddExpenseView().environmentObject(viewModel)) {
                         Text("Add Expense")
                             .foregroundColor(.black)
                             .modifier(TransactionButtonStyle(color: Color("brand.gray.two")))
                     }
-                    
-                    
                 }
                 .padding(.bottom)
             }
@@ -70,9 +66,7 @@ struct TransactionListView: View {
                         .padding(.leading)
                     Spacer()
                     
-                    NavigationLink {
-                        AllTransactionsListView(viewModel: TransactionViewModel())
-                    } label: {
+                    NavigationLink(destination: AllTransactionsListView().environmentObject(viewModel)) {
                         Text("View All")
                             .foregroundColor(.gray)
                             .font(.subheadline)
@@ -83,8 +77,7 @@ struct TransactionListView: View {
                 ScrollView {
                     VStack {
                         ForEach(viewModel.transaction2) { transaction in
-                            LatestTransactionCardView(transactionDescription: transaction.description, transactionOrigin: transaction.origin, transactionAmount: transaction.amount, transactionDate: transaction.date, selectedTransaction: ))
-                            // Fix Error
+                            LatestTransactionCardView(transactionDescription: transaction.description, transactionOrigin: transaction.origin, transactionAmount: transaction.amount, transactionDate: transaction.date, isExpense: transaction.isExpense)
                         }
                     }
                 }
@@ -104,29 +97,3 @@ struct TransactionListView_Previews: PreviewProvider {
             .environmentObject(Transaction2ViewModel())
     }
 }
-
-
-//                    if viewModel.transaction2.isEmpty {
-//                        Text("Empty Array")
-//                    } else {
-//                        Text("Existing Items")
-//                    }
-//                    List {
-//                        ForEach(viewModel.transaction2) { transaction2 in
-//                            Text(transaction2.description)
-//                            Text(transaction2.origin)
-//                        }
-//                    }
-
-
-
-
-//                        List(viewModel.transactions) { transaction in
-//                            VStack(alignment: .leading) {
-//                                Text(transaction.description)
-//                                Text(transaction.origin)
-//                                Text(transaction.date, style: .date)
-//                                Text("$\(transaction.amount)")
-////                                Text(transaction.type == .income ? "Income" : "Expense")
-//                            }
-//                        }

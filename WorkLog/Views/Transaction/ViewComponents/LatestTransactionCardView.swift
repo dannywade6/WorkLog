@@ -14,19 +14,22 @@ struct LatestTransactionCardView: View {
     var transactionAmount: Double
     var transactionDate: Date
     
-    enum transactionType {
-        case income
-        case expense
-    }
+//    enum TransactionType {
+//        case income
+//        case expense
+//    }
+//
+//    var selectedTransaction: TransactionType
     
-    var selectedTransaction: transactionType
+    var isExpense: Bool
     
     var body: some View {
         VStack {
             HStack {
                 HStack {
-                    Image(systemName: selectedTransaction == .expense ? "arrow.down.square.fill" : "arrow.up.square.fill")
-                        .foregroundColor(selectedTransaction == .expense ? .red : .green)
+//                    Image(systemName: selectedTransaction == .expense ? "arrow.down.square.fill" : "arrow.up.square.fill")
+                    Image(systemName: isExpense ? "arrow.down.square.fill" : "arrow.up.square.fill")
+                        .foregroundColor(isExpense ? .red : .green)
                         .foregroundColor(.red)
                         .font(.largeTitle)
                     
@@ -45,7 +48,8 @@ struct LatestTransactionCardView: View {
                         
                         Spacer()
                         
-                        Text(selectedTransaction == .expense ? "- £\(transactionAmount)" : "+ £\(transactionAmount)")
+//                        Text(selectedTransaction == .expense ? "- £\(transactionAmount)" : "+ £\(transactionAmount)")
+                        Text(isExpense ? "- £\(transactionAmount)" : "+ £\(transactionAmount)")
                             .font(.headline)
                             .bold()
                         
@@ -59,6 +63,6 @@ struct LatestTransactionCardView: View {
 
 struct LatestTransactionCardView_Previews: PreviewProvider {
     static var previews: some View {
-        LatestTransactionCardView(transactionDescription: "Lunch", transactionOrigin: "Tesco", transactionAmount: 12.22, transactionDate: Date(), selectedTransaction: .income)
+        LatestTransactionCardView(transactionDescription: "Lunch", transactionOrigin: "Tesco", transactionAmount: 12.22, transactionDate: Date(), isExpense: false)
     }
 }

@@ -12,6 +12,7 @@ struct WorkLogApp: App {
     var body: some Scene {
         WindowGroup {
             HomeTabView()
+                .environmentObject(TransactionViewModel())
         }
     }
 }

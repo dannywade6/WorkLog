@@ -9,6 +9,7 @@ import SwiftUI
 import SwipeActions
 
 struct HomeView: View {
+    @EnvironmentObject var viewModel: TransactionViewModel
     
     @State var showProfileInfoView:Bool = false
     let date: Date = Date()
@@ -37,7 +38,9 @@ struct HomeView: View {
                         
                         VStack {
                             VStack {
+//                                ProfitLossChart()
                                 ProfitLossChart()
+//                                    .environmentObject(self.viewModel)
                                     .frame(height: 250)
                             }
                         }
@@ -71,5 +74,6 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            .environmentObject(TransactionViewModel())
     }
 }

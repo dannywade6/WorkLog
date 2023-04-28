@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HomeTabView: View {
     
+    @EnvironmentObject var viewModel: TransactionViewModel
+    
     @State private var selectedTab = "One"
     
     var body: some View {
@@ -37,5 +39,6 @@ struct HomeTabView: View {
 struct HomeTabView_Previews: PreviewProvider {
     static var previews: some View {
         HomeTabView()
+            .environmentObject(TransactionViewModel())
     }
 }

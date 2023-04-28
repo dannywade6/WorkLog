@@ -13,6 +13,7 @@ struct LatestTransactionCardView: View {
     var transactionOrigin: String
     var transactionAmount: Double
     var transactionDate: Date
+    var transactionAmountFormatted: String
     
 //    enum TransactionType {
 //        case income
@@ -46,7 +47,7 @@ struct LatestTransactionCardView: View {
                         }
                         
                         Spacer()
-                        Text(isExpense ? "- £\(transactionAmount)" : "+ £\(transactionAmount)")
+                        Text(isExpense ? "- \(transactionAmountFormatted)" : "+ \(transactionAmountFormatted)")
                             .font(.headline)
                             .bold()
                         
@@ -60,6 +61,6 @@ struct LatestTransactionCardView: View {
 
 struct LatestTransactionCardView_Previews: PreviewProvider {
     static var previews: some View {
-        LatestTransactionCardView(transactionDescription: "Lunch", transactionOrigin: "Tesco", transactionAmount: 12.22, transactionDate: Date(), isExpense: false)
+        LatestTransactionCardView(transactionDescription: "Lunch", transactionOrigin: "Tesco", transactionAmount: 12.22, transactionDate: Date(), transactionAmountFormatted: "100", isExpense: false)
     }
 }

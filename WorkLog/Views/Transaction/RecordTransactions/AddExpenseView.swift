@@ -14,16 +14,18 @@ struct AddExpenseView: View {
     @State private var expenseDescription = ""
     @State private var expenseOrigin = ""
     @State private var expenseDate = Date()
-    @State private var expenseAmount: Double = 0.00
+    @State private var expenseAmountText = ""
+    @State private var expenseAmount: Double = 0.0
     
-    let numberFormatter: NumberFormatter
+    let numberFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.locale = Locale.current
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 2
+        formatter.minimumFractionDigits = 0
+        return formatter
+    }()
     
-    init() {
-        numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .currency
-        numberFormatter.maximumFractionDigits = 2
-        numberFormatter.currencyCode = "GBP"
-    }
     
     var body: some View {
         NavigationStack {
@@ -41,11 +43,15 @@ struct AddExpenseView: View {
                     }
                 }
                 Section(header: Text("Expense Amount")) {
-                    TextField("Expense Amount", value: $expenseAmount, formatter: numberFormatter)
+                    TextField("Expense Amount", text: $expenseAmountText)
+                        .onChange(of: expenseAmountText) { newValue in
+                            expenseAmount = numberFormatter.number(from: newValue)?.doubleValue ?? 0.0
+                        }
+                        .keyboardType(.decimalPad)
                 }
                 
                 Button {
-                    viewModel.addTransaction2(description: expenseDescription, origin: expenseOrigin, date: expenseDate, amount: expenseAmount, isExpense: true)
+                    viewModel.addTransaction2(description: expenseDescription, origin: expenseOrigin, date: expenseDate, amount: expenseAmount, isExpense: true, formattedCurrency: formatCurrency(expenseAmount))
                     resetFields()
                 } label: {
                     Text("Add Expense")
@@ -54,11 +60,21 @@ struct AddExpenseView: View {
             .navigationTitle("Add Expense")
         }
     }
+    
+    func formatCurrency(_ amount: Double) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.currencyCode = "GBP"
+        formatter.maximumFractionDigits = 2
+        return formatter.string(from: NSNumber(value: amount)) ?? "£0.00"
+    }
+    
     func resetFields() {
         expenseDescription = ""
         expenseOrigin = ""
         expenseDate = Date()
-        expenseAmount = 0.00
+        expenseAmountText = ""
+        expenseAmount = 0.0
     }
 }
 

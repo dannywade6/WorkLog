@@ -14,4 +14,5 @@ struct Transaction: Identifiable {
     var date: Date
     var amount: Double
     var isExpense: Bool
+    var formattedCurrency: String?
 }

@@ -11,19 +11,20 @@ struct AddIncomeView: View {
     
     @EnvironmentObject var viewModel: TransactionViewModel
     
-    @State var incomeDescription = ""
-    @State var incomeOrigin = ""
-    @State var incomeDate = Date()
-    @State var incomeAmount: Double = 0.00
+    @State private var incomeDescription = ""
+    @State private var incomeOrigin = ""
+    @State private var incomeDate = Date()
+    @State private var incomeAmountText = ""
+    @State private var incomeAmount: Double = 0.00
     
-    let numberFormatter: NumberFormatter
-    
-    init() {
-        numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .currency
-        numberFormatter.maximumFractionDigits = 2
-        numberFormatter.currencyCode = "GBP"
-    }
+    let numberFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.locale = Locale.current
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 2
+        formatter.minimumFractionDigits = 0
+        return formatter
+    }()
     
     
     var body: some View {
@@ -42,24 +43,39 @@ struct AddIncomeView: View {
                     }
                 }
                 Section(header: Text("Income Amount")) {
-                    TextField("Income Amount", value: $incomeAmount, formatter: numberFormatter)
+                    TextField("Income Amount", text: $incomeAmountText)
+                        .onChange(of: incomeAmountText) { newValue in
+                            incomeAmount = numberFormatter.number(from: newValue)?.doubleValue ?? 0.0
+                        }
+                        .keyboardType(.decimalPad)
                 }
                 
                 Button {
-                    viewModel.addTransaction2(description: incomeDescription, origin: incomeOrigin, date: incomeDate, amount: incomeAmount, isExpense: false)
+                    viewModel.addTransaction2(description: incomeDescription, origin: incomeOrigin, date: incomeDate, amount: incomeAmount, isExpense: false, formattedCurrency: formatCurrency(incomeAmount))
                     resetFields()
                 } label: {
                     Text("Add Income")
                 }
-
+                
             }
             .navigationTitle("Add Income")
         }
     }
+    
+    func formatCurrency(_ amount: Double) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.currencyCode = "GBP"
+        formatter.maximumFractionDigits = 2
+        return formatter.string(from: NSNumber(value: amount)) ?? "£0.00"
+    }
+    
+    
     func resetFields() {
         incomeDescription = ""
         incomeOrigin = ""
         incomeDate = Date()
+        incomeAmountText = ""
         incomeAmount = 0.00
     }
 }

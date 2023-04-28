@@ -56,7 +56,7 @@ struct TransactionListView: View {
                             EmptyStateView().scrollDisabled(true)
                         } else {
                             ForEach(viewModel.transaction) { transaction in
-                                LatestTransactionCardView(transactionDescription: transaction.description, transactionOrigin: transaction.origin, transactionAmount: transaction.amount, transactionDate: transaction.date, isExpense: transaction.isExpense)
+                                LatestTransactionCardView(transactionDescription: transaction.description, transactionOrigin: transaction.origin, transactionAmount: transaction.amount, transactionDate: transaction.date, transactionAmountFormatted: transaction.formattedCurrency ?? "N/A", isExpense: transaction.isExpense)
                             }
                         }
                     }
@@ -66,7 +66,6 @@ struct TransactionListView: View {
             }
             .scrollIndicators(.hidden)
         }
-        
     }
 }
 

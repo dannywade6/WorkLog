@@ -8,43 +8,45 @@
 import SwiftUI
 
 struct AllTransactionsListView: View {
-    
     @EnvironmentObject var viewModel: TransactionViewModel
-    
-    @State var transactionOptions: [String] = ["All", "Income", "Expense"]
-    @State var transactionSelection = "All"
-    
+    @State var transactionSelection = "all"
     
     var body: some View {
         NavigationStack {
             
             VStack {
-                if viewModel.transaction.isEmpty {
-                    EmptyStateView()
-                } else {
-                    HStack {
-                        Picker("Pick an Option", selection: $transactionSelection) {
-                            ForEach(transactionOptions, id: \.self) { item in
-                                Text(item)
-                            }
-                        }
-                        .pickerStyle(.segmented)
-                        .padding()
-                        .padding(.horizontal, 20)
+                
+                HStack {
+                    Picker("Transaction", selection: $transactionSelection) {
+                        Text("All").tag("all")
+                        Text("Income").tag("income")
+                        Text("Expense").tag("expense")
                     }
-                    
-                    ScrollView {
-                        VStack {
-                            ForEach(viewModel.transaction) { transaction in
-                                LatestTransactionCardView(transactionDescription: transaction.description, transactionOrigin: transaction.origin, transactionAmount: transaction.amount, transactionDate: transaction.date, isExpense: transaction.isExpense)
-                            }
-                        }
-                        .padding(.horizontal)
-                    }
+                    .pickerStyle(.segmented)
+                    .padding()
                 }
                 
+                ScrollView {
+                    VStack {
+                        ForEach(filteredTransactions(), id: \.id) { transaction in
+                            LatestTransactionCardView(transactionDescription: transaction.description, transactionOrigin: transaction.origin, transactionAmount: transaction.amount, transactionDate: transaction.date, isExpense: transaction.isExpense)
+                        }
+                    }
+                    .padding(.horizontal)
+                }
             }
             .navigationTitle("All Transactions")
+        }
+    }
+    
+    func filteredTransactions() -> [Transaction] {
+        switch transactionSelection {
+        case "income":
+            return viewModel.transaction.filter { !$0.isExpense }
+        case "expense":
+            return viewModel.transaction.filter { $0.isExpense }
+        default:
+            return viewModel.transaction
         }
     }
 }

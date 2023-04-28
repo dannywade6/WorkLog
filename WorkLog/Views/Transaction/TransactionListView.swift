@@ -68,11 +68,14 @@ struct TransactionListView: View {
                         .padding(.leading)
                     Spacer()
                     
-                    NavigationLink(destination: AllTransactionsListView().environmentObject(viewModel)) {
-                        Text("View All")
-                            .foregroundColor(.gray)
-                            .font(.subheadline)
-                            .padding(.trailing)
+                    
+                    if !viewModel.transaction.isEmpty {
+                        NavigationLink(destination: AllTransactionsListView().environmentObject(viewModel)) {
+                            Text("View All")
+                                .foregroundColor(.gray)
+                                .font(.subheadline)
+                                .padding(.trailing)
+                        }
                     }
                 }
                 

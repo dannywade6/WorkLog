@@ -26,7 +26,7 @@ struct HomeTabView: View {
                 }
                 .tag("Two")
             
-            TransactionListView().environmentObject(TransactionViewModel())
+            TransactionListView(viewModel: viewModel)
                 .tabItem {
                     Label("Transactions", systemImage: "dollarsign.circle")
                 }

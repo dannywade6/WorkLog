@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AllTransactionsListView: View {
+    
     @EnvironmentObject var viewModel: TransactionViewModel
     @State var transactionSelection = "all"
     

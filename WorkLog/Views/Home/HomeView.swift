@@ -39,7 +39,7 @@ struct HomeView: View {
                         VStack {
                             VStack {
 //                                ProfitLossChart()
-                                ProfitLossChart()
+                                ProfitLossChart(viewModel: viewModel)
 //                                    .environmentObject(self.viewModel)
                                     .frame(height: 250)
                             }

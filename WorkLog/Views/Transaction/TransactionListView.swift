@@ -9,18 +9,13 @@ import SwiftUI
 
 struct TransactionListView: View {
     
-    @EnvironmentObject var viewModel: TransactionViewModel
-    
-   
+//    @EnvironmentObject var viewModel: TransactionViewModel
+    @StateObject var viewModel: TransactionViewModel
     
     var body: some View {
         NavigationStack {
             VStack {
-                ProfitLossChart()
-
-//                Text("Total Income: \(viewModel.totalIncomeAmount())")
-//                Text("Total Expense: \(viewModel.totalExpenseAmount())")
-//                Text("Total Amount: \(viewModel.totalProfitOrLoss())")
+                ProfitLossChart(viewModel: viewModel)
                 
                 HStack {
                     // Add Income
@@ -80,7 +75,6 @@ struct TransactionListView: View {
 
 struct TransactionListView_Previews: PreviewProvider {
     static var previews: some View {
-        TransactionListView()
-            .environmentObject(TransactionViewModel())
+        TransactionListView(viewModel: TransactionViewModel())
     }
 }

@@ -10,7 +10,7 @@ import Charts
 
 struct ProfitLossChart: View {
     
-    @EnvironmentObject var viewModel: TransactionViewModel
+    @StateObject var viewModel: TransactionViewModel
     
     
     let revenueData = [
@@ -84,8 +84,8 @@ struct ProfitLossChart: View {
 
 struct ProfitLossChart_Previews: PreviewProvider {
     static var previews: some View {
-        ProfitLossChart()
-            .environmentObject(TransactionViewModel())
+        ProfitLossChart(viewModel: TransactionViewModel())
+//            .environmentObject(TransactionViewModel())
     }
 }
 

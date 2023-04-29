@@ -14,14 +14,6 @@ struct LatestTransactionCardView: View {
     var transactionAmount: Double
     var transactionDate: Date
     var transactionAmountFormatted: String
-    
-//    enum TransactionType {
-//        case income
-//        case expense
-//    }
-//
-//    var selectedTransaction: TransactionType
-    
     var isExpense: Bool
     
     var body: some View {
